@@ -6,73 +6,27 @@
 Backup 상품을 사용하기 위한 절차는 다음과 같습니다.
 
 ## 백업 대상 준비
-
-### IP 확인
-백업 상품을 사용하기 위해서는 백업 시스템이 서버에 설치할 에이전트에 직접 연결할 수 있는 IP가 필요합니다. 서버가 공인 IP를 사용하고 있다면 문제가 없지만, NAT 아래에서 사설 IP를 사용하고 있거나 TOAST Cloud 환경이라면 NAT IP 또는 Floating IP를 `/etc/hosts`에 등록해야 합니다.
-
-##### NAT 환경에서 사설 IP를 사용하고 있을 때
-네트워크 관리자에게 문의하거나 다음과 같은 방법으로 NAT IP를 확인합니다.
-
-* IP를 반환해주는 서비스에 문의
-	* 다음과 같이 내 IP를 반환해주는 서비스들이 있습니다. 
-
-	```
-	bot.whatismyipaddress.com
-	ipecho.net/plain
-	icanhazip.com
-	ipv4.icanhazip.com
-	ipv4.ipogre.com
-	```
-
-	브라우저로 접속하거나 `curl`과 같은 명령행 도구를 이용하여 IP를 알아낼 수 있습니다.
-	
-	```
-	$ curl bot.whatismyipaddress.com
-	```
-
-* ip route 정보에서 얻기
-
-	* 다음과 같이 `ip route` 명령을 이용해 IP를 알아낼 수 있습니다.
-	
-	```
-	# ip route | awk '{print $NF;exit}
-	```
-
-##### TOAST Cloud 환경일 때
-TOAST Cloud 환경에서는 Floating IP를 통해 외부 네트워크와 연결됩니다. Floating IP는 TOAST Cloud Console에서 쉽게 확인할 수 있습니다.
-
-<br>
-<center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_01.png"/>
-<br>
-[그림 1] Floating IP 확인
-</center>
-<br>
-
-### Hostname 확인
-백업 상품에서 각 서버를 구분하기 위한 hostname이 필요합니다. hostname 역시 `/etc/hosts`에 등록해야 합니다.
-
-다음과 같은 명령으로 hostname을 알아낼 수 있습니다.
-
-```
-$ hostname
-host-192-168-0-87
-```
-
-### `/etc/hosts` 수정
-앞 단계에서 확인한 IP와 hostname을 `/etc/hosts` 파일에 추가합니다.
-
-```
-# vi /etc/hosts
-...
-133.186.138.171	host-192-168-0-87
-
-```
-
 ### Avamar Agent 설치 
 [TOAST Cloud의 다운로드 페이지](http://docs.cloud.toast.com/ko/Download)에서 서버 OS에 해당하는 Agent를 내려받아 설치합니다.
 
 지원하는 OS는 CentOS, Debian, Ubuntu, Windows입니다.
+
+* CentOS
+
+	```
+	# rpm -ivh AvamarClient-linux-sles11-x86_64-7.5.100-183.rpm
+	```
+
+* Debian, Ubuntu
+
+	```
+	# dpkg -i AvamarClient-debian4.0-x86_64-7.5.100-183.deb
+	```
+
+* Windows
+
+	Windows에서는 내려받은 설치 파일을 실행하면 설치가 진행됩니다.
+
 
 ## 상품 활성화
 Backup 상품은 TOAST Cloud의 Infrastructure 메뉴에서 선택할 수 있습니다. Project List 화면에서 권한이 있는 프로젝트의 목록을 확인하고 Backup 상품을 추가할 프로젝트를 선택한 다음 왼쪽 메뉴에서 `Infrastructure > Backup`을 선택합니다.
