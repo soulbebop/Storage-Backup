@@ -6,8 +6,8 @@
 Backup 상품을 사용하기 위한 절차는 다음과 같습니다.
 
 ## 백업 대상 준비
-### Avamar Agent 설치 
-[TOAST Cloud의 다운로드 페이지](http://docs.cloud.toast.com/ko/Download)에서 서버 OS에 해당하는 Agent를 내려받아 설치합니다.
+### Agent 설치 
+[TOAST Cloud의 다운로드 페이지](http://docs.cloud.toast.com/ko/Download)에서 서버에 설치된 OS 종류에 따라 Agent를 내려받아 설치합니다.
 
 지원하는 OS는 CentOS, Debian, Ubuntu, Windows입니다.
 
@@ -20,6 +20,8 @@ Backup 상품을 사용하기 위한 절차는 다음과 같습니다.
 * Debian, Ubuntu
 
 	```
+	# apt-get update
+	# apt-get install -y libxml2
 	# dpkg -i AvamarClient-debian4.0-x86_64-7.5.100-183.deb
 	```
 
@@ -33,9 +35,9 @@ Backup 상품은 TOAST Cloud의 Infrastructure 메뉴에서 선택할 수 있습
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_02.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_01.png"/>
 <br>
-[그림 2] Backup 상품 선택
+[그림 1] Backup 상품 선택
 </center>
 <br>
 
@@ -43,9 +45,9 @@ Backup 상품은 TOAST Cloud의 Infrastructure 메뉴에서 선택할 수 있습
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_03.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_02.png"/>
 <br>
-[그림 3] 상품 이용 선택
+[그림 2] 상품 이용 선택
 </center>
 <br>
 
@@ -54,17 +56,17 @@ Backup 상품은 TOAST Cloud의 Infrastructure 메뉴에서 선택할 수 있습
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_04.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_03.png"/>
 <br>
-[그림 4] 서버 등록 선택
+[그림 3] 서버 등록 선택
 </center>
 <br>
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_05.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_04.png"/>
 <br>
-[그림 5] 서버 등록 화면
+[그림 4] 서버 등록 화면
 </center>
 <br>
 
@@ -88,9 +90,9 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_06.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_05.png"/>
 <br>
-[그림 6] 서버 선택
+[그림 5] 서버와 OS 선택
 </center>
 <br>
 
@@ -98,9 +100,9 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_07.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_06.png"/>
 <br>
-[그림 7] 등록한 서버 목록
+[그림 6] 등록한 서버 목록
 </center>
 <br>
 
@@ -110,9 +112,9 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_08.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_07.png"/>
 <br>
-[그림 8] 등록한 백업 경로 목록
+[그림 7] 등록한 백업 경로 목록
 </center>
 <br>
 
@@ -120,9 +122,9 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_09.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_08.png"/>
 <br>
-[그림 9] 백업 경로 추가
+[그림 8] 백업 경로 추가
 </center>
 <br>
 
@@ -130,28 +132,29 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_10.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_09.png"/>
 <br>
-[그림 10] 백업 경로 완료
+[그림 9] 백업 경로 추가 완료
 </center>
 <br>
+
 
 ## 백업 결과 조회
 백업 경로 목록에서 백업 경로를 클릭하면 백업 결과를 조회할 수 있습니다. 백업이 한 번도 수행되지 않았다면 빈 목록을, 백업이 한 번이라도 수행됐다면 결과 목록을 볼 수 있습니다.
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_11.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_10.png"/>
 <br>
-[그림 11] 백업이 한 번도 수행되지 않았을 때의 백업 결과 조회
+[그림 10] 한 번도 백업되지 않았을 때의 결과 조회
 </center>
 <br>
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_12.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_11.png"/>
 <br>
-[그림 12] 백업 결과 조회
+[그림 11] 한 번 이상 백업되었을 때의 결과 조회
 </center>
 <br>
 
@@ -163,9 +166,9 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_13.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_12.png"/>
 <br>
-[그림 13] 백업 정책 변경 대화창
+[그림 12] 백업 정책 변경 대화창
 </center>
 <br>
 
@@ -173,31 +176,12 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_14.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_13.png"/>
 <br>
-[그림 14] 백업 정책 변경 결과
+[그림 13] 백업 정책 변경 결과
 </center>
 <br>
 
-## 백업 경로 삭제
-
-백업 경로 목록에서 각 항목의 왼쪽 체크박스를 선택하고 `백업 경로 삭제` 버튼을 클릭하면 경로 삭제 대화창이 나타납니다. `확인` 버튼을 클릭하면 선택한 경로가 제거됩니다.
-
-<br>
-<center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_15.png"/>
-<br>
-[그림 15] 백업 경로 삭제 대화창
-</center>
-<br>
-
-<br>
-<center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_16.png"/>
-<br>
-[그림 16] 백업 경로 삭제 결과
-</center>
-<br>
 
 ## 복구 요청 
 등록한 백업 경로를 1회 이상 백업했다면, 해당 데이터로 복구를 요청할 수 있습니다. 
@@ -206,9 +190,9 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_17.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_14.png"/>
 <br>
-[그림 17] 복구 신청 목록
+[그림 14] 복구 신청 목록
 </center>
 <br>
 
@@ -216,25 +200,25 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_18.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_15.png"/>
 <br>
-[그림 18] 복구 신청 대화창
+[그림 15] 복구 신청 대화창
 </center>
 <br>
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_19.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_16.png"/>
 <br>
-[그림 19] 복구할 백업 일자 선택
+[그림 16] 복구할 백업 일자 선택
 </center>
 <br>
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_20.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_17.png"/>
 <br>
-[그림 20] 복구할 데이터가 없는 경우의 메시지
+[그림 17] 복구할 데이터가 없는 경우의 메시지
 </center>
 <br>
 
@@ -242,17 +226,17 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_21.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_18.png"/>
 <br>
-[그림 21] 개인정보 수집 및 이용에 동의하지 않음
+[그림 18] 개인정보 수집 및 이용에 동의하지 않음
 </center>
 <br>
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_22.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_19.png"/>
 <br>
-[그림 22] 개인정보 수집 및 이용에 동의
+[그림 19] 개인정보 수집 및 이용에 동의
 </center>
 <br>
 
@@ -260,33 +244,69 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_23.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_20.png"/>
 <br>
-[그림 23] 복구 신청 결과
+[그림 20] 복구 신청 결과
 </center>
 <br>
-
 
 복구 신청을 하면 진행상태가 `접수`로 표시됩니다. 운영자가 처리를 시작하면 `진행중`으로 변경되며, 처리가 완료되면 `완료`로 표시됩니다.
 
 
-## 서버 삭제
+## 백업 경로 삭제
 
-서버 목록에서 각 항목의 왼쪽 체크박스를 선택하고 `서버 삭제` 버튼을 클릭하면 서버 삭제 대화창이 나타납니다. `확인` 버튼을 클릭하면 선택한 서버가 제거됩니다. 
+백업 경로 목록에서 각 항목의 왼쪽 체크박스를 선택하면 `백업 경로 삭제` 버튼이 활성화 됩니다. 활성화된 버튼을 클릭하면 경로 삭제 대화창이 나타납니다. 대화창에서 `확인` 버튼을 클릭하면 선택한 경로가 제거됩니다.
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_24.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_21.png"/>
 <br>
-[그림 24] 서버 삭제 대화창
+[그림 21] 백업 경로를 선택하여 삭제 버튼 활성화
 </center>
 <br>
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_25.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_22.png"/>
 <br>
-[그림 25] 서버 삭제 완료 
+[그림 22] 백업 경로 삭제 대화창
+</center>
+<br>
+
+<br>
+<center>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_23.png"/>
+<br>
+[그림 23] 백업 경로 삭제 결과
+</center>
+<br>
+
+## 서버 삭제
+
+서버 목록에서 각 항목의 왼쪽 체크박스를 선택하면 서버 `삭제 버튼`이 활성화 됩니다. 버튼을 클릭하면 서버 삭제 대화창이 나타납니다. `확인` 버튼을 클릭하면 선택한 서버가 제거됩니다. 
+
+
+<br>
+<center>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_24.png"/>
+<br>
+[그림 24] 서버를 선택하여 삭제 버튼 활성화
+</center>
+<br>
+
+<br>
+<center>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_25.png"/>
+<br>
+[그림 25] 서버 삭제 대화창
+</center>
+<br>
+
+<br>
+<center>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_26.png"/>
+<br>
+[그림 26] 서버 삭제 완료 
 </center>
 <br>
 
@@ -294,9 +314,9 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_26.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_27.png"/>
 <br>
-[그림 26] 서버 삭제 불가 안내 메시지
+[그림 27] 백업 경로 삭제 안내
 </center>
 <br>
 
@@ -316,9 +336,9 @@ avagent.d Info: Client Agent stopped.                      [  OK  ]
 
 <br>
 <center>
-<img src="/Users/arzhna/project/iaas/backup/guide_images/backup_27.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_28.png"/>
 <br>
-[그림 27] 상품 이용 종료
+[그림 28] 상품 이용 종료
 </center>
 <br>
 
