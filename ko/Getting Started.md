@@ -40,6 +40,7 @@ Backup 상품은 TOAST Cloud의 Infrastructure 메뉴에서 선택할 수 있습
 [그림 1] Backup 상품 선택
 </center>
 <br>
+<br>
 
 상품 페이지에서 `상품 이용` 버튼을 클릭하면 상품을 활성화됩니다.
 
@@ -49,6 +50,7 @@ Backup 상품은 TOAST Cloud의 Infrastructure 메뉴에서 선택할 수 있습
 <br>
 [그림 2] 상품 이용 선택
 </center>
+<br>
 <br>
 
 ## 서버 등록 
@@ -61,6 +63,7 @@ Backup 상품은 TOAST Cloud의 Infrastructure 메뉴에서 선택할 수 있습
 [그림 3] 서버 등록 선택
 </center>
 <br>
+<br>
 
 <br>
 <center>
@@ -68,6 +71,7 @@ Backup 상품은 TOAST Cloud의 Infrastructure 메뉴에서 선택할 수 있습
 <br>
 [그림 4] 서버 등록 화면
 </center>
+<br>
 <br>
 
 아직 서버의 에이전트를 백업 시스템에 등록하지 않은 상태이므로 선택할 수 있는 서버가 없습니다. 화면에 출력된 `Agent 등록시 입력할 도메인`을 이용하여 에이전트를 등록해야 합니다. 
@@ -95,6 +99,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 [그림 5] 서버와 OS 선택
 </center>
 <br>
+<br>
 
 서버와 OS 종류를 선택하고 `서버 등록` 버튼을 클릭해 등록을 완료합니다. 등록을 완료하면 서버 목록에서 등록한 서버를 확인할 수 있습니다. (서버 등록 단계에서 백업 경로를 같이 등록할 수 있지만, 백업 경로 등록은 다음 단계에서 설명합니다.)
 
@@ -105,7 +110,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 [그림 6] 등록한 서버 목록
 </center>
 <br>
-
+<br>
 
 ## 백업 경로 추가 
 서버 목록에서 서버를 선택하면 화면 하단에 해당 서버의 백업 경로 목록이 나타납니다. 아직 백업 경로를 추가하지 않아 목록이 비어 있는 것을 확인할 수 있습니다.
@@ -117,6 +122,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 [그림 7] 등록한 백업 경로 목록
 </center>
 <br>
+<br>
 
 `백업 경로 추가` 버튼을 클릭해 백업 경로 추가를 위한 대화창을 띄우고 백업할 경로와 백업 정책을 입력합니다.
 
@@ -126,6 +132,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 <br>
 [그림 8] 백업 경로 추가
 </center>
+<br>
 <br>
 
 `백업 경로 추가` 버튼을 클릭하면 완료 알림창이 나타납니다. 그리고 백그라운드의 백업 경로 목록에서 추가한 경로를 확인할 수 있습니다.
@@ -137,7 +144,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 [그림 9] 백업 경로 추가 완료
 </center>
 <br>
-
+<br>
 
 ## 백업 결과 조회
 백업 경로 목록에서 백업 경로를 클릭하면 백업 결과를 조회할 수 있습니다. 백업이 한 번도 수행되지 않았다면 빈 목록을, 백업이 한 번이라도 수행됐다면 결과 목록을 볼 수 있습니다.
@@ -149,6 +156,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 [그림 10] 한 번도 백업되지 않았을 때의 결과 조회
 </center>
 <br>
+<br>
 
 <br>
 <center>
@@ -156,6 +164,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 <br>
 [그림 11] 한 번 이상 백업되었을 때의 결과 조회
 </center>
+<br>
 <br>
 
 백업 결과는 정상적으로 백업이 잘 되었다면 `성공`으로 실패했다면 `실패`로 표시됩니다. 그리고 백업은 잘 되었지만, 백업 도중 파일이 변경되었다면 `성공(주의)`로 표시됩니다.
@@ -171,6 +180,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 [그림 12] 백업 정책 변경 대화창
 </center>
 <br>
+<br>
 
 정책을 변경하고 `백업 정책 변경` 버튼을 클릭하면 변경된 정책이 반영됩니다.
 
@@ -181,7 +191,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 [그림 13] 백업 정책 변경 결과
 </center>
 <br>
-
+<br>
 
 ## 복구 요청 
 등록한 백업 경로를 1회 이상 백업했다면, 해당 데이터로 복구를 요청할 수 있습니다. 
@@ -195,6 +205,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 [그림 14] 복구 신청 목록
 </center>
 <br>
+<br>
 
 `복구 신청` 버튼을 클릭하면 복구 신청 대화창이 표시됩니다. 등록한 경로 중 복구를 원하는 경로를 선택할 수 있고, 경로를 선택하면 백업 일자를 선택할 수 있습니다. 한 번도 백업되지 않았거나, 모두 실패하여 복구할 수 있는 백업 데이터가 없다면 복구할 데이터가 없다는 메시지가 표시됩니다.
 
@@ -205,6 +216,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 [그림 15] 복구 신청 대화창
 </center>
 <br>
+<br>
 
 <br>
 <center>
@@ -213,6 +225,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 [그림 16] 복구할 백업 일자 선택
 </center>
 <br>
+<br>
 
 <br>
 <center>
@@ -220,6 +233,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 <br>
 [그림 17] 복구할 데이터가 없는 경우의 메시지
 </center>
+<br>
 <br>
 
 복구할 경로와 일자를 선택하고, 이름과 휴대전화, Email 주소를 입력한 다음 `개인정보 수집 및 이용`에 동의해야 복구 신청을 할 수 있습니다. 동의하지 않으면 `신청` 버튼이 활성화되지 않습니다. 
@@ -231,6 +245,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 [그림 18] 개인정보 수집 및 이용에 동의하지 않음
 </center>
 <br>
+<br>
 
 <br>
 <center>
@@ -238,6 +253,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 <br>
 [그림 19] 개인정보 수집 및 이용에 동의
 </center>
+<br>
 <br>
 
 `신청` 버튼을 클릭하면 운영자에게 신청 정보가 전달되고 복구 신청 상태를 목록에서 확인할 수 있습니다.
@@ -248,6 +264,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 <br>
 [그림 20] 복구 신청 결과
 </center>
+<br>
 <br>
 
 복구 신청을 하면 진행상태가 `접수`로 표시됩니다. 운영자가 처리를 시작하면 `진행중`으로 변경되며, 처리가 완료되면 `완료`로 표시됩니다.
@@ -264,6 +281,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 [그림 21] 백업 경로를 선택하여 삭제 버튼 활성화
 </center>
 <br>
+<br>
 
 <br>
 <center>
@@ -271,6 +289,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 <br>
 [그림 22] 백업 경로 삭제 대화창
 </center>
+<br>
 <br>
 
 <br>
@@ -285,13 +304,13 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 서버 목록에서 각 항목의 왼쪽 체크박스를 선택하면 서버 `삭제 버튼`이 활성화 됩니다. 버튼을 클릭하면 서버 삭제 대화창이 나타납니다. `확인` 버튼을 클릭하면 선택한 서버가 제거됩니다. 
 
-
 <br>
 <center>
 <img src="http://static.toastoven.net/prod_backup/getting_started/backup_24.png"/>
 <br>
 [그림 24] 서버를 선택하여 삭제 버튼 활성화
 </center>
+<br>
 <br>
 
 <br>
@@ -301,6 +320,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 [그림 25] 서버 삭제 대화창
 </center>
 <br>
+<br>
 
 <br>
 <center>
@@ -308,6 +328,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 <br>
 [그림 26] 서버 삭제 완료 
 </center>
+<br>
 <br>
 
 서버를 삭제하기 전에 먼저 등록한 백업 경로를 삭제해야 합니다. 만약 등록된 백업 경로가 있다면 안내 메시지가 나타나고 삭제가 중단됩니다.
@@ -318,6 +339,7 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 <br>
 [그림 27] 백업 경로 삭제 안내
 </center>
+<br>
 <br>
 
 서버를 삭제한 후에는 반드시 에이전트를 정지시키고 등록을 해지해야 합니다. 해지하지 않으면 해당 서버를 다시 등록할 수 없습니다. 반드시 다음 명령을 이용하여 에이전트를 정지하고 등록 해지하십시오.
@@ -340,5 +362,6 @@ avagent.d Info: Client Agent stopped.                      [  OK  ]
 <br>
 [그림 28] 상품 이용 종료
 </center>
+<br>
 <br>
 
