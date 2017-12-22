@@ -5,33 +5,9 @@
 
 Backup 상품을 사용하기 위한 절차는 다음과 같습니다.
 
-## 백업 대상 준비
-### Agent 설치 
-[TOAST Cloud의 다운로드 페이지](http://docs.cloud.toast.com/ko/Download)에서 서버에 설치된 OS 종류에 따라 Agent를 내려받아 설치합니다.
-
-지원하는 OS는 CentOS, Debian, Ubuntu, Windows입니다.
-
-* CentOS
-
-	```
-	# rpm -ivh AvamarClient-linux-sles11-x86_64-7.5.100-183.rpm
-	```
-
-* Debian, Ubuntu
-
-	```
-	# apt-get update
-	# apt-get install -y libxml2
-	# dpkg -i AvamarClient-debian4.0-x86_64-7.5.100-183.deb
-	```
-
-* Windows
-
-	Windows에서는 내려받은 설치 파일을 실행하면 설치가 진행됩니다.
-
 
 ## 상품 활성화
-Backup 상품은 TOAST Cloud의 Infrastructure 메뉴에서 선택할 수 있습니다. Project List 화면에서 권한이 있는 프로젝트의 목록을 확인하고 Backup 상품을 추가할 프로젝트를 선택한 다음 왼쪽 메뉴에서 `Infrastructure > Backup`을 선택합니다.
+Backup 상품은 TOAST Console의 Infrastructure 메뉴에서 선택할 수 있습니다. Project List 화면에서 권한이 있는 프로젝트의 목록을 확인하고 Backup 상품을 추가할 프로젝트를 선택한 다음 왼쪽 메뉴에서 `Infrastructure > Backup`을 선택합니다.
 
 <br>
 <center>
@@ -74,9 +50,42 @@ Backup 상품은 TOAST Cloud의 Infrastructure 메뉴에서 선택할 수 있습
 <br>
 <br>
 
-아직 서버의 에이전트를 백업 시스템에 등록하지 않은 상태이므로 선택할 수 있는 서버가 없습니다. 화면에 출력된 `Agent 등록시 입력할 도메인`을 이용하여 에이전트를 등록해야 합니다. 
+아직 서버에 에이전트를 설치하지 않았기 때문에 선택할 수 있는 서버가 없습니다. 에이전트를 먼저 설치하고 화면에 출력된 `Agent 등록시 입력할 도메인`을 이용하여 등록해야 합니다. 
 
-다음과 같은 명령을 입력하여 에이전트를 백업 시스템에 등록합니다.
+### Agent 설치
+[TOAST의 다운로드 페이지](http://docs.cloud.toast.com/ko/Download)에서 서버에 설치된 OS 종류에 따라 Agent를 내려받아 설치합니다. 지원하는 OS는 CentOS, Debian, Ubuntu, Windows입니다.
+
+* CentOS
+
+	```
+	# rpm -ivh AvamarClient-linux-sles11-x86_64-7.5.100-183.rpm
+	```
+
+* Debian, Ubuntu
+
+	```
+	# apt-get update
+	# apt-get install -y libxml2
+	# dpkg -i AvamarClient-debian4.0-x86_64-7.5.100-183.deb
+	```
+
+* Windows
+
+	Windows 서버에서는 내려받은 설치 파일을 실행하면 설치가 진행됩니다. Windows용 Agent는 설치 관리자에서 백업 시스템에 등록하기 위한 정보를 요구합니다. 백업 시스템 URL과 사용자의 도메인 정보를 입력하고 진행합니다. (이 단계를 건너뛰어도 설치는 진행됩니다. 설치 완료된 다음 에이전트 활성화 대화창을 열어 등록 정보를 입력해도 됩니다.)
+	
+
+<br>
+<center>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_05.png"/>
+<br>
+[그림 5] Windows Agent 등록 정보 입력 대화창
+</center>
+<br>
+<br>
+
+
+### Agent 등록
+Linux 서버에서는 다음과 같은 명령을 입력하여 에이전트를 백업 시스템에 등록합니다.
 
 ```
 # /usr/local/avamar/etc/avagent.d register tcbackup1.toastmaker.net /TCBackup_alpha/cio1hXb6ainRhbMu
@@ -90,13 +99,26 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 ```
 
-서버 등록 화면을 다시 띄우면 서버 선택 드롭다운 메뉴에 등록한 서버의 hostname을 확인할 수 있습니다.
+Windows 서버에서는 다음과 같이 활성화 대화창을 열어 등록합니다. 설치 단계에서 입력했다면 이 과정은 생략해도 됩니다.
 
 <br>
 <center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_05.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_06.png"/>
 <br>
-[그림 5] 서버와 OS 선택
+[그림 6] Windows Agent 활성화 대화창
+</center>
+<br>
+<br>
+
+
+### 서버 등록 
+서버 등록 화면을 다시 띄우면 서버 선택 드롭다운 메뉴에서 에이전트를 등록한 서버의 hostname을 확인할 수 있습니다.
+
+<br>
+<center>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_07.png"/>
+<br>
+[그림 7] 서버와 OS 선택
 </center>
 <br>
 <br>
@@ -105,9 +127,9 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_06.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_08.png"/>
 <br>
-[그림 6] 등록한 서버 목록
+[그림 8] 등록한 서버 목록
 </center>
 <br>
 <br>
@@ -117,9 +139,9 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_07.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_09.png"/>
 <br>
-[그림 7] 등록한 백업 경로 목록
+[그림 9] 등록한 백업 경로 목록
 </center>
 <br>
 <br>
@@ -128,9 +150,9 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_08.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_10.png"/>
 <br>
-[그림 8] 백업 경로 추가
+[그림 10] 백업 경로 추가
 </center>
 <br>
 <br>
@@ -139,9 +161,9 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_09.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_11.png"/>
 <br>
-[그림 9] 백업 경로 추가 완료
+[그림 11] 백업 경로 추가 완료
 </center>
 <br>
 <br>
@@ -151,18 +173,18 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_10.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_12.png"/>
 <br>
-[그림 10] 한 번도 백업되지 않았을 때의 결과 조회
+[그림 12] 한 번도 백업되지 않았을 때의 결과 조회
 </center>
 <br>
 <br>
 
 <br>
 <center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_11.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_13.png"/>
 <br>
-[그림 11] 한 번 이상 백업되었을 때의 결과 조회
+[그림 13] 한 번 이상 백업되었을 때의 결과 조회
 </center>
 <br>
 <br>
@@ -175,9 +197,9 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_12.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_14.png"/>
 <br>
-[그림 12] 백업 정책 변경 대화창
+[그림 14] 백업 정책 변경 대화창
 </center>
 <br>
 <br>
@@ -186,9 +208,9 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_13.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_15.png"/>
 <br>
-[그림 13] 백업 정책 변경 결과
+[그림 15] 백업 정책 변경 결과
 </center>
 <br>
 <br>
@@ -200,9 +222,9 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_14.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_16.png"/>
 <br>
-[그림 14] 복구 신청 목록
+[그림 16] 복구 신청 목록
 </center>
 <br>
 <br>
@@ -211,38 +233,18 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_15.png"/>
-<br>
-[그림 15] 복구 신청 대화창
-</center>
-<br>
-<br>
-
-<br>
-<center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_16.png"/>
-<br>
-[그림 16] 복구할 백업 일자 선택
-</center>
-<br>
-<br>
-
-<br>
-<center>
 <img src="http://static.toastoven.net/prod_backup/getting_started/backup_17.png"/>
 <br>
-[그림 17] 복구할 데이터가 없는 경우의 메시지
+[그림 17] 복구 신청 대화창
 </center>
 <br>
 <br>
-
-복구할 경로와 일자를 선택하고, 이름과 휴대전화, Email 주소를 입력한 다음 `개인정보 수집 및 이용`에 동의해야 복구 신청을 할 수 있습니다. 동의하지 않으면 `신청` 버튼이 활성화되지 않습니다. 
 
 <br>
 <center>
 <img src="http://static.toastoven.net/prod_backup/getting_started/backup_18.png"/>
 <br>
-[그림 18] 개인정보 수집 및 이용에 동의하지 않음
+[그림 18] 복구할 백업 일자 선택
 </center>
 <br>
 <br>
@@ -251,7 +253,27 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 <center>
 <img src="http://static.toastoven.net/prod_backup/getting_started/backup_19.png"/>
 <br>
-[그림 19] 개인정보 수집 및 이용에 동의
+[그림 19] 복구할 데이터가 없는 경우의 메시지
+</center>
+<br>
+<br>
+
+복구할 경로와 일자를 선택하고, 이름과 휴대전화, Email 주소를 입력한 다음 `개인정보 수집 및 이용`에 동의해야 복구 신청을 할 수 있습니다. 동의하지 않으면 `신청` 버튼이 활성화되지 않습니다. 
+
+<br>
+<center>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_20.png"/>
+<br>
+[그림 20] 개인정보 수집 및 이용에 동의하지 않음
+</center>
+<br>
+<br>
+
+<br>
+<center>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_21.png"/>
+<br>
+[그림 21] 개인정보 수집 및 이용에 동의
 </center>
 <br>
 <br>
@@ -260,9 +282,9 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_20.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_22.png"/>
 <br>
-[그림 20] 복구 신청 결과
+[그림 22] 복구 신청 결과
 </center>
 <br>
 <br>
@@ -276,27 +298,27 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_21.png"/>
-<br>
-[그림 21] 백업 경로를 선택하여 삭제 버튼 활성화
-</center>
-<br>
-<br>
-
-<br>
-<center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_22.png"/>
-<br>
-[그림 22] 백업 경로 삭제 대화창
-</center>
-<br>
-<br>
-
-<br>
-<center>
 <img src="http://static.toastoven.net/prod_backup/getting_started/backup_23.png"/>
 <br>
-[그림 23] 백업 경로 삭제 결과
+[그림 23] 백업 경로를 선택하여 삭제 버튼 활성화
+</center>
+<br>
+<br>
+
+<br>
+<center>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_24.png"/>
+<br>
+[그림 24] 백업 경로 삭제 대화창
+</center>
+<br>
+<br>
+
+<br>
+<center>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_25.png"/>
+<br>
+[그림 25] 백업 경로 삭제 결과
 </center>
 <br>
 
@@ -306,27 +328,27 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_24.png"/>
-<br>
-[그림 24] 서버를 선택하여 삭제 버튼 활성화
-</center>
-<br>
-<br>
-
-<br>
-<center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_25.png"/>
-<br>
-[그림 25] 서버 삭제 대화창
-</center>
-<br>
-<br>
-
-<br>
-<center>
 <img src="http://static.toastoven.net/prod_backup/getting_started/backup_26.png"/>
 <br>
-[그림 26] 서버 삭제 완료 
+[그림 26] 서버를 선택하여 삭제 버튼 활성화
+</center>
+<br>
+<br>
+
+<br>
+<center>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_27.png"/>
+<br>
+[그림 27] 서버 삭제 대화창
+</center>
+<br>
+<br>
+
+<br>
+<center>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_28.png"/>
+<br>
+[그림 28] 서버 삭제 완료 
 </center>
 <br>
 <br>
@@ -335,9 +357,9 @@ avagent.d Info: Client Agent started.                      [  OK  ]
 
 <br>
 <center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_27.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_29.png"/>
 <br>
-[그림 27] 백업 경로 삭제 안내
+[그림 29] 백업 경로 삭제 안내
 </center>
 <br>
 <br>
@@ -353,14 +375,25 @@ avagent.d Info: Client Agent stopped.                      [  OK  ]
 
 ```
 
+Windows의 경우 tray의 Agent 아이콘을 우클릭하여 메뉴를 띄우고 종료를 클릭합니다. 
+
+<br>
+<center>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_30.png"/>
+<br>
+[그림 30] Windows Agent 종료
+</center>
+<br>
+<br>
+
 ## 상품 이용 종료 
 상품 이용을 종료할 때도 등록된 서버가 없어야 합니다. 모든 서버를 삭제하여 등록된 서버가 없는 상태에서 상단의 `이용 종료` 버튼을 클릭하면 Backup 상품 이용이 종료됩니다. 
 
 <br>
 <center>
-<img src="http://static.toastoven.net/prod_backup/getting_started/backup_28.png"/>
+<img src="http://static.toastoven.net/prod_backup/getting_started/backup_31.png"/>
 <br>
-[그림 28] 상품 이용 종료
+[그림 31] 상품 이용 종료
 </center>
 <br>
 <br>
