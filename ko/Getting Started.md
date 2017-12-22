@@ -41,6 +41,8 @@ Backup 상품은 TOAST Console의 Infrastructure 메뉴에서 선택할 수 있�
 <br>
 <br>
 
+아직 서버에 에이전트를 설치하지 않았기 때문에 선택할 수 있는 서버가 없습니다. 에이전트를 먼저 설치하고 화면에 출력된 `Agent 등록시 입력할 도메인`을 이용하여 등록해야 합니다. 
+
 <br>
 <center>
 <img src="http://static.toastoven.net/prod_backup/getting_started/backup_04.png"/>
@@ -50,7 +52,6 @@ Backup 상품은 TOAST Console의 Infrastructure 메뉴에서 선택할 수 있�
 <br>
 <br>
 
-아직 서버에 에이전트를 설치하지 않았기 때문에 선택할 수 있는 서버가 없습니다. 에이전트를 먼저 설치하고 화면에 출력된 `Agent 등록시 입력할 도메인`을 이용하여 등록해야 합니다. 
 
 ### Agent 설치
 [TOAST의 다운로드 페이지](http://docs.cloud.toast.com/ko/Download)에서 서버에 설치된 OS 종류에 따라 Agent를 내려받아 설치합니다. 지원하는 OS는 CentOS, Debian, Ubuntu, Windows입니다.
@@ -71,7 +72,7 @@ Backup 상품은 TOAST Console의 Infrastructure 메뉴에서 선택할 수 있�
 
 * Windows
 
-	Windows 서버에서는 내려받은 설치 파일을 실행하면 설치가 진행됩니다. Windows용 Agent는 설치 관리자에서 백업 시스템에 등록하기 위한 정보를 요구합니다. 백업 시스템 URL과 사용자의 도메인 정보를 입력하고 진행합니다. (이 단계를 건너뛰어도 설치는 진행됩니다. 설치 완료된 다음 에이전트 활성화 대화창을 열어 등록 정보를 입력해도 됩니다.)
+	Windows 서버에서는 내려받은 설치 파일을 실행하면 설치가 진행됩니다. Windows용 Agent는 설치 관리자에서 백업 시스템에 등록하기 위한 정보를 요구합니다. 백업 시스템 URL과 사용자의 도메인 정보를 입력하고 설치를 진행하세요. (이 단계를 건너뛰어도 설치는 진행됩니다. 설치를 완료하고 에이전트 활성화 대화창을 열어 등록 정보를 입력해도 됩니다.)
 	
 
 <br>
