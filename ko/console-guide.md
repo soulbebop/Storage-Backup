@@ -2,18 +2,16 @@
 
 ## 서버 등록
 ### 에이전트 설치
-서버를 등록하기 위해서는 먼저 서버에 에이전트를 설치해야 합니다. 에이전트를 설치할 때는 서버 등록 페이지에서 확인할 수 있는 `Agent 등록 시 입력할 도메인` 정보를 입력해야 합니다.
+서버를 등록하기 위해서는 먼저 서버에 에이전트를 설치해야 합니다. 에이전트를 설치할 때 사용자의 도메인 정보를 입력해야 합니다. 도메인 정보는 그림과 같이 서버 등록 페이지에서 확인할 수 있습니다.
 
 <br>
 <center>
 <img src="http://static.toastoven.net/prod_backup/console_guide/image_01.png"/>
-<br>
-[그림 1] Agent 등록 시 입력할 도메인
 </center>
 <br>
 <br>
 
-[그림 1]과 같이 도메인 정보가 `/TCBackup_alpha/faL6GUt2nboWNI0a`라면 다음과 같이 에이전트를 설치합니다.
+도메인 정보가 `/TCBackup_alpha/faL6GUt2nboWNI0a`라면 다음과 같이 에이전트를 설치합니다.
 
 * Linux
 
@@ -29,7 +27,6 @@
 <center>
 <img src="http://static.toastoven.net/prod_backup/console_guide/image_02.png"/>
 <br>
-[그림 2] Windows Agent 등록
 </center>
 <br>
 <br>

@@ -39,13 +39,11 @@ TOAST의 백업 서비스는 간편하게 백업 정책을 등록하고, 백업 
 | Windows Server 2016 | x64 | (all editions) |  |
 
 ## 복구 프로세스
-복구는 사용자의 요청에 따라 운영자가 수동으로 처리합니다. 원활한 처리를 위해 운영자가 사용자에게 연락을 취할 수도 있습니다.
+복구는 사용자의 요청에 따라 운영자가 수동으로 처리합니다. 원활한 처리를 위해 운영자가 사용자에게 연락을 취할 수도 있습니다. 복구 프로세스는 다음 그림과 같습니다.
 
 <br>
 <center>
 <img src="http://static.toastoven.net/prod_backup/overview/restore_process.png"/>
-<br>
-[그림 1] 복구 프로세스
 </center>
 <br>
 <br>
