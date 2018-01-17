@@ -23,7 +23,7 @@
 * Linux
 
     ```
-    # curl http://tools.tcbackup.toastmaker.net/scripts/install.sh | bash -s /TCBackup_alpha/faL6GUt2nboWNI0a
+    sudo curl http://tools.tcbackup.toastmaker.net/scripts/install.sh | bash -s /TCBackup_alpha/faL6GUt2nboWNI0a
     ```
 
 * Windows
@@ -48,7 +48,7 @@
 * Linux
 
     ```
-    $ curl http://tools.tcbackup.toastmaker.net/scripts/reinstall.sh | bash -s {사용자의 도메인}
+    sudo curl http://tools.tcbackup.toastmaker.net/scripts/reinstall.sh | bash -s {사용자의 도메인}
     ```
 
 * Windows
@@ -61,7 +61,7 @@
 * Linux
 
     ```
-    # service avagent stop
+    service avagent stop
     ```
 
 * Windows
@@ -73,7 +73,7 @@
 * Linux
 
     ```
-    # service avagent restart
+    service avagent restart
     ```
 
 * Windows
@@ -174,12 +174,8 @@
 * Linux
 
     ```
-    # curl http://tools.tcbackup.toastmaker.net/scripts/uninstall.sh | bash
-
+    curl http://tools.tcbackup.toastmaker.net/scripts/uninstall.sh | bash
     ```
 
 * Windows
-
-    ```
-    c:> uninstall.sh
-    ```
+    에이전트를 종료합니다. 다음에 다시 사용할 때는 클라이언트 활성화 항목을 열어 새로운 도메인 정보를 입력합니다.
