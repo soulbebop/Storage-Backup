@@ -23,7 +23,7 @@
 * Linux
 
     ```
-    sudo curl http://tools.tcbackup.toastmaker.net/scripts/install.sh | bash -s /TCBackup_alpha/faL6GUt2nboWNI0a
+    curl http://tools.tcbackup.toastmaker.net/scripts/install.sh | bash -s /TCBackup_alpha/faL6GUt2nboWNI0a
     ```
 
 * Windows
@@ -48,12 +48,12 @@
 * Linux
 
     ```
-    sudo curl http://tools.tcbackup.toastmaker.net/scripts/reinstall.sh | bash -s {사용자의 도메인}
+    curl http://tools.tcbackup.toastmaker.net/scripts/reinstall.sh | bash -s {사용자의 도메인}
     ```
 
 * Windows
     * 시스템 트레이에서 백업 에이전트 아이콘을 우클릭한 다음 관리 > 클라이언트 활성화 항목을 클릭합니다.
-    * MC Server와 MC Domain을 다시 입력 합니다.
+    * MC Server와 MC Domain을 다시 입력합니다.
 
 ### 백업 에이전트 종료
 잠시 백업을 중단하고 싶다면 에이전트를 종료할 수 있습니다.
