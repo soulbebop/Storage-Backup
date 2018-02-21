@@ -50,9 +50,9 @@
 
   Windows 용 에이전트는 [TOAST의 다운로드 페이지](http://docs.cloud.toast.com/ko/Download)에서 다운로드해 설치합니다. 설치 중 MC Server와 MC Domain 정보를 입력해야 합니다. MC Domain은 사용자의 도메인 정보입니다. MC Server는 다음 정보를 입력해 주십시오.
 
-    ```
-    MC Server : tcbackup1.toastmaker.net
-    ```
+```
+MC Server : tcbackup1.toastmaker.net
+```
 
 <br>
 <center>
@@ -115,11 +115,11 @@
 
   백업할 경로를 지정합니다. 절대 경로를 정확히 입력해야 합니다. 경로를 잘못 입력하면 백업이 되지 않거나 원치 않는 경로가 백업될 수 있습니다.
 
-    ```
-    예시)
-    Windows :   c:\backup
-    Linux   :   /home/backup
-    ```
+```
+예시)
+Windows :   c:\backup
+Linux   :   /home/backup
+```
 
 * **백업 주기**
 

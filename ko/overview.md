@@ -57,6 +57,6 @@ DELL EMC AVAMAR
 * Linux : /usr/local/avamar
 * Windows : C:\Program Files\avs
 
-## 백업 프로그램 데몬(프로세스) 정보
+### 백업 프로그램 데몬(프로세스) 정보
 * Linux : /usr/local/avamar/bin/avagent.bin
 * Windows : Avamar Backup Client
