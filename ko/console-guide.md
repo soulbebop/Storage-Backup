@@ -30,9 +30,9 @@
 
 * **Linux**
 
-```
-curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/bootstrap.sh | bash
-```
+   ```
+   # curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/bootstrap.sh | bash
+   ```
 
 
 
@@ -43,7 +43,7 @@ curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/bootstra
 * **Linux**
 
     ```
-    tcbackup install /TCBackup_alpha/faL6GUt2nboWNI0a
+    # tcbackup install /TCBackup_alpha/faL6GUt2nboWNI0a
     ```
 
 * **Windows**
@@ -68,17 +68,16 @@ curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/bootstra
 * **Linux**
 
     ```
-    tcbackup re-register
+    # tcbackup re-register
     ```
 
-* **Windows** (수정중)
-    * 아래 powershell script 를 다운로드 받아 실행합니다.
+* **Windows** 
+아래 powershell script 를 다운로드 받아 실행합니다.
 
-      ```
-      http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
-      ```
+   ```
+   http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
+   ```
 
-      ​
 
 ### 백업 에이전트 종료
 잠시 백업을 중단하고 싶다면 에이전트를 종료할 수 있습니다.
@@ -86,7 +85,7 @@ curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/bootstra
 * **Linux**
 
     ```
-    tcbackup stop
+    # tcbackup stop
     ```
 
 * **Windows**
@@ -98,7 +97,7 @@ curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/bootstra
 * **Linux**
 
     ```
-    tcbackup restart
+    # tcbackup restart
     ```
 
 * **Windows**
@@ -199,7 +198,7 @@ curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/bootstra
 * **Linux**
 
     ```
-    tcbackup uninstall
+    # tcbackup uninstall
     ```
 
 * **Windows**
