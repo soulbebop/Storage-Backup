@@ -73,7 +73,7 @@
 
 * **Windows** 
 
-아래 powershell script 를 다운로드 받아 실행합니다.
+  아래 powershell script 를 다운로드 받아 실행합니다.
 
    ```
    http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
