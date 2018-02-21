@@ -31,7 +31,7 @@ TOAST 백업 서비스는 간편하게 백업 정책을 등록하고, 백업 이
 | CentOS | x64 | 6.x, 7.x | ext2, ext3, ext4, xfs |
 | Debian | x64 | 6.x, 7.x, 8.x | ext2, ext3, ext4 |
 | Ubuntu | x64 | 12.04 LTS, 14.04 LTS, 16.04 LTS | ext2, ext3, ext4 |
-| Windows Server 2008 R2 | x64 | Standard, Enterprise, Datacenter | n-node active/passive, active/active cluster |
+| Windows Server 2008 R2 | x64 | Standard |  |
 | Windows Server 2012 R2 | x64 | (all editions) |  |
 | Windows Server 2016 | x64 | (all editions) |  |
 
