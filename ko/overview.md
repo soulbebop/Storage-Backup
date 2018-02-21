@@ -35,15 +35,28 @@ TOAST 백업 서비스는 간편하게 백업 정책을 등록하고, 백업 이
 | Windows Server 2012 R2 | x64 | (all editions) |  |
 | Windows Server 2016 | x64 | (all editions) |  |
 
-## 복구 프로세스
+## 복구 요청 절차
 복구는 사용자의 요청에 따라 운영자가 수동으로 처리합니다. 원활한 처리를 위해 운영자가 사용자에게 연락을 취할 수도 있습니다. 복구 프로세스는 다음 그림과 같습니다.
 
-<br>
-<center>
-<img src="http://static.toastoven.net/prod_backup/overview/restore_process.png"/>
-</center>
-<br>
-<br>
+1. 복구할 서버 선택
+2. 복구탭에서 복구신청 클릭
+3. 복구 신청내용작성후 신청 클릭
+
+업무 시간 기준 3시간 이내 신청하신 복구 요청이 완료되며 업무 시간 이후는 익일 완료됩니다.
+
+단, 장애로 인한 긴급 복구 건은 장애 문의로 접수하시면 보다 빠르게 처리가 가능합니다.(업무시간은 10:00~19:00이며 공휴일은 제외됩니다.)
 
 ## 과금
 서비스를 활성화하면 기본 월정액이 과금됩니다. 그리고 등록한 서버의 수와 스토리지 사용량에 따라 추가 요금이 부과됩니다. 월정액의 기본 제공 사양은 서버 2대, 스토리지 사용량 100GB입니다.
+
+## 참고 사항
+### 백업 S/W
+DELL EMC AVAMAR
+
+### 백업 프로그램 설치 위치
+* Linux : /usr/local/avamar
+* Windows : C:\Program Files\avs
+
+## 백업 프로그램 데몬(프로세스) 정보
+* Linux : /usr/local/avamar/bin/avagent.bin
+* Windows : Avamar Backup Client

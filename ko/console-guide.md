@@ -30,8 +30,8 @@
 
 * **Linux**
 
-   ```bash
-   # curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh | bash
+   ```
+   curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh | bash
    ```
 
 
@@ -42,8 +42,8 @@
 
 * **Linux**
 
-    ```bash
-    # tcbackup install /TCBackup_alpha/faL6GUt2nboWNI0a
+    ```
+    tcbackup install /TCBackup_alpha/faL6GUt2nboWNI0a
     ```
 
 * **Windows**
@@ -67,8 +67,8 @@
 
 * **Linux**
 
-    ```bash
-    # tcbackup re-register
+    ```
+    tcbackup re-register
     ```
 
 * **Windows** 
@@ -85,8 +85,8 @@
 
 * **Linux**
 
-    ```bash
-    # tcbackup stop
+    ```
+    tcbackup stop
     ```
 
 * **Windows**
@@ -97,8 +97,8 @@
 
 * **Linux**
 
-    ```bash
-    # tcbackup restart
+    ```
+    tcbackup restart
     ```
 
 * **Windows**
