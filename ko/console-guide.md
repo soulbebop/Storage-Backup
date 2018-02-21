@@ -15,6 +15,17 @@
 <br>
 <br>
 
+### 서버 Security Group 설정
+
+백업 서버와 통신을 위해 서버 Security Group 에 아래 내용을 추가합니다.
+
+| Direction        | 포트      | CIDR               |
+| ---------------- | ------- | ------------------ |
+| Ingress / Egress | ALL TCP | 133.186.132.0/24   |
+| Egress           | 443     | 103.243.202.188/32 |
+
+
+
 ### 백업 CLI 설치
 
 * **Linux**
@@ -52,7 +63,7 @@ curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/bootstra
 <br>
 
 ### 백업 에이전트 재등록
-백업할 서버의 IP가 변경되었다면 에이전트를 재등록해야 합니다. 재등록 명령은 다음과 같습니다.
+백업할 서버의 호스트명이 변경되었다면 에이전트를 재등록해야 합니다. 재등록 명령은 다음과 같습니다.
 
 * **Linux**
 
@@ -61,8 +72,13 @@ curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/bootstra
     ```
 
 * **Windows** (수정중)
-    * 시스템 트레이에서 백업 에이전트 아이콘을 우클릭한 다음 관리 > 클라이언트 활성화 항목을 클릭합니다.
-    * MC Server와 MC Domain을 다시 입력합니다.
+    * 아래 powershell script 를 다운로드 받아 실행합니다.
+
+      ```
+      http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
+      ```
+
+      ​
 
 ### 백업 에이전트 종료
 잠시 백업을 중단하고 싶다면 에이전트를 종료할 수 있습니다.
