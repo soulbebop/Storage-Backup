@@ -72,6 +72,7 @@
     ```
 
 * **Windows** 
+
 아래 powershell script 를 다운로드 받아 실행합니다.
 
    ```
