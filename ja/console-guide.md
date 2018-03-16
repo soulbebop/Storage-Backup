@@ -1,4 +1,4 @@
-## Storage > Backup > 콘솔 사용 가이드
+## Storage > Backup > Console Guide
 
 ## 백업 agent
 백업할 서버를 등록하기 위해서는 먼저 대상 서버에 agent를 설치해야 합니다. agent를 설치할 때는 사용자의 도메인 정보가 필요합니다. 도메인 정보는 서버 등록 페이지에서 확인할 수 있습니다.
