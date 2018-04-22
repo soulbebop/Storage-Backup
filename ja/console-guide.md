@@ -115,6 +115,8 @@ MC Server : tcbackup1.toastmaker.net
 
   백업할 경로를 지정합니다. 절대 경로를 정확히 입력해야 합니다. 경로를 잘못 입력하면 백업이 되지 않거나 원치 않는 경로가 백업될 수 있습니다.
 
+  soft link를 백업 경로로 설정하면, soft link file만 백업됩니다.
+
 ```
 예시)
 Windows :   c:\backup
