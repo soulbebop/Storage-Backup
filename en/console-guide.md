@@ -1,30 +1,30 @@
-## Storage > Backup > 콘솔 사용 가이드
+## Storage > Backup > Console Guide
 
-## 백업 에이전트(agent)
-백업할 서버를 등록하려면 먼저 대상 서버에 에이전트(agent)를 설치해야 합니다. 에이전트를 설치할 때는 사용자의 도메인 정보가 필요합니다. 도메인 정보는 **서버 등록** 페이지에서 확인할 수 있습니다.
+## Backup Agent
+To register a backup server, agent must be installed in the server. User's domain information is required to install an agent: check domain information on the **Register Server** page.
 
-> [참고]  
-> 도메인은 많은 수의 서버를 그룹화하여 관리하기 위해 사용하는 백업 시스템의 단위입니다.
-> 도메인은 백업 서비스를 활성화하면 자동으로 생성됩니다.
-> 사용자의 도메인에 백업할 서버를 등록하려면 에이전트 설치 명령의 파라미터로 도메인 정보를 입력합니다.
+> [Note]  
+> Domain is the unit of the backup system used to manage many servers in groups.
+> It is automatically created if backup service is enabled.
+> To register a backup server in user's domain, enter domain information with the parameter commanding agent installation.
 
 <br>
 <img src="http://static.toastoven.net/prod_backup/console_guide/image_01.png"/>
 <br>
 <br>
 
-### 서버 보안 그룹(security group) 설정
+### Security Group Configuration
 
-백업 서버와 통신하려면 서버 보안 그룹에 아래 내용을 추가합니다.
+To communicate with the backup server, add the following to the server security group.
 
-| 방향(direction)        | 포트      | CIDR               |
+| Direction       | Port | CIDR               |
 | ---------------- | ------- | ------------------ |
 | Ingress/Egress | ALL TCP | 133.186.132.0/24   |
 | Egress           | 443     | 103.243.202.188/32 |
 
 
 
-### 백업 CLI 설치
+### Install Backup CLI
 
 * **Linux**
 
@@ -34,9 +34,9 @@
 
 
 
-### 백업 에이전트 설치
+### Install Backup Agent
 
-도메인 정보가 `/TCBackup_alpha/faL6GUt2nboWNI0a`라면 다음과 같이 에이전트를 설치합니다.
+If the domain information is `/TCBackup_alpha/faL6GUt2nboWNI0a`, install agent as below:
 
 * **Linux**
 
@@ -46,7 +46,7 @@
 
 * **Windows**
 
-  Windows용 에이전트는 [TOAST의 다운로드 페이지](http://docs.toast.com/en/Download)에서 다운로드해 설치합니다. 설치 중 MC Server와 MC Domain 정보를 입력해야 합니다. MC Domain은 사용자의 도메인 정보입니다. MC Server에는 다음 정보를 입력합니다.
+  For Windows agent, download from [Downloads of TOAST](http://docs.toast.com/en/Download) and install. MC Server and MC Domain are required for installation: MC Domain refers to user's domain information and MC Server requires the following:  
 
 ```
 MC Server : tcbackup1.toastmaker.net
@@ -58,8 +58,8 @@ MC Server : tcbackup1.toastmaker.net
 <br>
 <br>
 
-### 백업 에이전트 재등록
-백업할 서버의 호스트명이 변경되었다면 에이전트를 다시 등록해야 합니다. 재등록 명령은 다음과 같습니다.
+### Re-register Backup Agent
+If the host name of backup server has changed, agent needs to be re-registered. Here's the command:
 
 * **Linux**
 
@@ -69,15 +69,15 @@ MC Server : tcbackup1.toastmaker.net
 
 * **Windows**
 
-  아래 PowerShell 스크립트를 다운로드해 실행합니다.
+  Download and execute the PowerShell script as below.
 
    ```
    http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
    ```
 
 
-### 백업 에이전트 종료
-잠시 백업을 중단하고 싶다면 에이전트를 종료할 수 있습니다.
+### Close Backup Agent
+To suspend backup for a while, you can close an agent.
 
 * **Linux**
 
@@ -87,10 +87,10 @@ MC Server : tcbackup1.toastmaker.net
 
 * **Windows**
 
-    시스템 트레이에서 백업 에이전트 아이콘을 마우스 오른쪽 버튼으로 클릭한 다음 **종료**를 클릭합니다.
+    Right-click the backup agent icon in the system tray and press **Close**.
 
-### 백업 에이전트 재시작
-종료한 백업 에이전트를 다시 시작하려면 다음 명령을 사용합니다.
+### Restart Backup Agent
+To restart the closed backup agent, use the following command:
 
 * **Linux**
 
@@ -100,101 +100,101 @@ MC Server : tcbackup1.toastmaker.net
 
 * **Windows**
 
-    시작 메뉴에서 **EMC Avamar > Client**를 실행합니다.
+    Execute **EMC Avamar > Client** on the start menu.
 
 
-## 서버 등록
-백업할 서버에 에이전트를 설치하면 **서버 등록** 화면의 **서버 선택** 항목에서 에이전트가 등록된 서버를 선택할 수 있습니다.
+## Register Server
+Install agent in the backup server and select a server in which agent is registered from **Select Servers** in **Register Servers**.
 
-### 백업 경로 추가
-하나의 서버에 여러 개의 백업 경로를 추가할 수 있습니다. 백업 경로 추가는 서버 등록이 완료된 다음에도 할 수 있습니다.
+### Add Backup Routes
+Many backup routes can be added to a server: adding routes is available after server registration is completed.
 
-* **백업 경로**
+* **Backup Routes**
 
-  백업할 경로를 지정합니다. 절대 경로를 정확히 입력해야 합니다. 경로를 잘못 입력하면 백업이 되지 않거나 원치 않는 경로가 백업될 수 있습니다.
+  Specify a route for backup. Make sure the route is entered correctly; otherwise, backup may fail or end up in a wrong route.
 
-  soft link를 백업 경로로 설정하면, soft link file만 백업됩니다.
+  When soft link is set as the backup route, only soft link file is backed up.
 
 ```
-예시)
+e.g)
 Windows :   c:\backup
 Linux   :   /home/backup
 ```
 
-* **백업 주기**
+* **Backup Cycle**
 
-  백업을 수행할 주기입니다. 1일 간격, 7일 간격 중 선택할 수 있습니다.
+  Cycle of backup execution: choose either daily or weekly.
 
-* **백업 시각**
+* **Backup Time**
 
-  백업을 시작할 시각입니다. 1시간 단위로 선택할 수 있습니다. 파일 변경이 가장 적고, 서버가 유휴 상태인 시각을 권장합니다. 실제 백업 시작은 상황에 따라 최대 1시간 정도 차이가 날 수 있습니다.
+  Start time of backup: select by the hour. It is recommended to select time when file change is the least and server is idle. Actual backup start time may differ up to 1 hour, depending on the situation.
 
-* **백업 보관 주기**
+* **Retention Cycle**
 
-  백업된 복제본을 보관할 기간입니다. 7일, 14일, 21일, 30일 중 선택할 수 있습니다.
+  Retention period for backed up copies: choose one of 7 days, 14 days, 21 days, or 30 days.
 
 
-### 백업 경로 목록
-서버 목록에서 서버 이름 왼쪽의 체크박스를 선택하면 화면 하단의 상세 화면에 선택한 서버의 백업 경로 목록이 표시됩니다.
+### List of Backup Routes
+Check the server name on the left of the server list, and backup routes of the selected server will be listed at the bottom of the page.   
 
-### 백업 결과 조회
-백업 경로 목록에서 백업 경로를 클릭하면 백업 결과를 조회할 수 있습니다. 백업 결과는 백업 완료 시각으로부터 최대 30분 이내에 집계됩니다.
+### Retrieve Results
+Click a backup route on the list to retrieve the result of backup, which is collected within half an hour to the latest, after backup completion time.  
 
-| 백업 결과  | 의미                          |
-| ------ | --------------------------- |
-| 성공     | 백업 성공                       |
-| 성공(주의) | 백업을 완료했지만, 백업 도중 원본 파일이 변경됨 |
-| 실패     | 백업 실패                       |
+| Backup Result             | Description                                                  |
+| ------------------------- | ------------------------------------------------------------ |
+| Successful                | Backup succeeded                                             |
+| Successful (with caution) | Backup is completed, but original file has changed during backup |
+| Failed                    | Backup failed                                                |
 
-> [참고]
-> 네트워크 상태와 백업 데이터의 용량, 같은 시간에 시작하도록 설정된 많은 백업 일정 등에 의해 3시간 이내에 백업이 완료되지 않으면 해당 일정은 실패로 기록됩니다.
+> [Note]
+> If a backup is not done within three hours, due to network status, volume of backup data, and lots of backup schedule configured to start all at once, it shall be recorded as a failure.
 
-### 백업 정책 변경
+### Change of Backup Policy
 
-백업 경로 목록에서 각 항목 오른쪽에 있는 **변경** 버튼을 클릭하면 백업 정책을 변경할 수 있습니다. 변경할 수 있는 항목은 `백업 주기`, `백업 시각`, `보관 주기`입니다.
+Click **Change** on the right of each item from the list of backup routes to change backup policy: items available to change are `Backup Cycle`, `Backup Time`, `Retention Cycle`.
 
-## 복구 신청
-등록한 백업 경로가 1회 이상 백업되었다면, 해당 데이터로 복구를 신청할 수 있습니다.
+## Apply for Restoration
+If a registered backup route has been backed up more than once, restoration of data can be applied.
 
-* **백업 경로**
+* **Backup Route **
 
-  사용자가 추가했던 백업 경로 중 하나를 선택할 수 있습니다.
+  User can select one of the added backup routes.   
 
-* **백업 일자**
+* **Backup Date**
 
-  복구할 복제본이 백업된 날짜를 선택할 수 있습니다. 한 번도 백업되지 않았거나, 모두 실패하여 복구할 수 있는 백업 데이터가 없다면 복구할 데이터가 없다는 메시지가 표시됩니다.
+  Select a date when a copy to restore was backed up. When there is no backup data since all has failed, message will show there is no data to restore.
 
-* **요청 사항**
+* **Requests**
 
-  복구에 필요한 세부 사항을 자유롭게 요청할 수 있습니다. 백업한 서버에 그대로 복구할 수 있지만 새로운 서버에 복구할 수도 있습니다.
+  Feel free to request for details required for restoration. Restoration can be made to the backup server, or to a new server.  
 
   ```
-  예시)
-  복구할 서버의 호스트명   : backup.guide
-  복구할 경로 : /home/debian
+  e.g)
+  Windows :   c:\backup
+  Linux   :   /home/backup
   ```
 
-* **연락처**
+* **Contact **
 
-  원활한 복구를 위해 담당자와 요청자 사이의 대화 채널로 사용할 연락처를 입력합니다. 수집된 개인 정보는 저장하지 않으며 복구를 완료하면 즉각 폐기합니다.
+  Enter contact information to serve as a dialogue channel between administrator and requester for flawless restoration. Collected personal information shall not be saved, to be immediately discarded when restoration is completed.
 
-복구 진행 상태는 다음 표와 같이 표시됩니다.
+Restoration status is displayed as below:
 
-| 상태   | 의미           |
-| ---- | ------------ |
-| 접수   | 복구 요청이 접수됨   |
-| 진행 중 | 운영자가 복구를 시작함 |
-| 완료   | 복구 완료        |
+| Status     | Description                                    |
+| ---------- | ---------------------------------------------- |
+| Received   | Application for restoration has been received. |
+| Processing | Operator started restoration.                  |
+| Completed  | Restoration has been completed.                |
 
 
-## 서버 삭제
+## Delete Servers
 
-서버를 삭제하기 전에 반드시 등록한 백업 경로를 삭제해야 합니다. 등록된 백업 경로가 있다면 안내 메시지가 나타나고 삭제가 중단됩니다.
+Must delete a registered backup route before deleting a server: if there is a registered backup route, message shows and deletion stops.  
 
-> [주의]
-> 서버를 삭제하면 보관된 백업 데이터도 삭제됩니다. 백업 데이터가 필요하다면 미리 복구 요청을 해서 원하는 서버에 복구해야 합니다.
+> [Caution]
+> If a server is deleted, its retained backup data shall also be deleted. If you need backup data, ask for restoration in advance and restore it to the server you need.  
 
-웹 콘솔에서 서버를 삭제한 후에는 반드시 서버에서 에이전트를 정지시키고 등록을 해지해야 합니다. 그렇지 않으면 해당 서버를 다시 등록할 수 없습니다. 해지 명령은 다음과 같습니다.
+After a server is deleted from the web console, stop agent from the server and cancel its registration: otherwise, the server cannot be registered again.  
 
 * **Linux**
 
@@ -204,4 +204,4 @@ Linux   :   /home/backup
 
 * **Windows**
 
-    에이전트를 종료합니다. 다음에 다시 사용할 때는 클라이언트 활성화 항목을 열어 새로운 도메인 정보를 입력합니다.
+    Close the agent: to use it again, open Enable Client and enter new domain information.

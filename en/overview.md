@@ -1,61 +1,61 @@
-## Storage > Backup > 개요
+## Storage > Backup > Overview 
 
-백업은 보안 위협, 사용자의 조작 실수, 저장 장치의 고장, 자연재해 등으로 인한 데이터 손실에 대비해 복제본을 만들고 안전하게 보관해 주는 서비스입니다. 보관한 복제본을 이용해 데이터를 복구할 수도 있습니다.
+Backup refers to creating and safely saving copies, in preparation against potential data loss, out of security threats, user's operational mistakes, failure in saving devices, or natural disasters. Saved copies may be used to restore data.  
 
-TOAST 백업 서비스는 전체 백업 방식과 증분 백업 방식을 함께 사용합니다. 최초 1회는 사용자가 등록한 경로의 데이터 전체를 백업합니다. 이후에는 데이터의 중복을 제거하여 백업 데이터를 최소화할 수 있는 가변 길이 중복제거(variable-length deduplication) 기술을 이용하여 증분만을 백업합니다. 따라서 백업 시간이 단축되고 네트워크 사용량도 줄어듭니다. 데이터는 암호화 과정을 거쳐 백업 스토리지로 안전하게 전송됩니다.
+TOAST Backup adopts both Full Backup and Incremental Backup. The initial backup regards the entire data of routes that user registered. In later times, only changes since the last backup are contained, by using variable-length deduplication, which can minimize backup data by removing duplicates.  Therefore, time, as well as network usage volume, can be saved. Data, meanwhile, is encrypted and safely transmitted to the backup storage. 
 
-TOAST 백업 서비스는 간편하게 백업 정책을 등록하고, 백업 이력을 조회하고, 복구 요청을 할 수 있는 웹 콘솔 환경을 제공합니다. 백업 결과는 매일 취합되어 사용자의 메일로 보고됩니다.
+TOAST Backup provides a web console environment, in which backup policy is conveniently registered, history is retrieved, and requests for backup are made. 
 
-## 서비스 특징
-* 다양한 운영체제를 지원합니다.
-* 가상화 환경에 최적화되었습니다.
-* 서비스를 중단하지 않고 백업할 수 있습니다.
-* 백업 주기와 백업 시각, 보관 주기를 설정할 수 있는 사용자 정의 백업 정책을 제공합니다.
+## Service Features 
+* Supports various operating systems;
+* Optimized to virtual environment; 
+* Backup is available without service suspension; and, 
+* Provides user-defined backup policy where the cycle, hour, and retention cycle can be set. 
 
-### 백업 주기
-1일 간격과 7일 간격을 선택할 수 있습니다.
+### Backup Cycle
+Choose either daily or weekly. 
 
-### 백업 시각
-1시간 단위로 백업 시작 시각을 선택할 수 있습니다. 파일 변경이 가장 적고, 서버가 유휴 상태인 시각을 권장합니다. 실제 백업 시작은 상황에 따라 최대 1시간 정도 차이가 날 수 있습니다.
+### Backup Time
+Select a backup start time by the hour. It is recommended to select time, when file change is the least and server is idle.  Actual start time may differ up to 1 hour, depending on the situation.  
 
-### 백업 보관 주기
-7일, 14일, 21일, 30일의 보관 주기를 선택할 수 있습니다.
+### Retention Cycle 
+Choose one of 7 days, 14 days, 21 days, or 30 days. 
 
-### 백업 결과 조회
-사용자는 백업 완료 시각으로부터 최대 30분 이내에 웹 콘솔에서 백업 결과를 조회할 수 있습니다. 만약 백업에 실패했다면 사용자의 메일로 실패 내용이 보고됩니다. 최대 3시간 동안 백업되지 않으면 실패로 기록됩니다.
+### Retrieve Results 
+User can retrieve backup results in the web console within half an hour to the latest, after backup is completed. User shall be reported by email on failure of backup. If a backup is not done for up to three hours, it shall be recorded as a failure. 
 
-## TOAST에서 지원하는 운영체제
-TOAST에서 지원하는 운영체제는 다음과 같습니다.
+## Operating Systems Supported by TOAST 
+TOAST supports the following operating systems:
 
-| 운영체제 | 하드웨어 아키텍처 | 지원 버전 | 지원 구성 |
+| OS | Hardware Architecture | Supportive Version | Supportive Configuration |
 | ---------------- | --------------------- | ------------------------ | ------------------------ |
 | CentOS | x64 | 6.5, 7.1 | ext2, ext3, ext4, xfs |
 | Debian | x64 | 8.2.0 | ext2, ext3, ext4 |
 | Ubuntu | x64 | 14.04 LTS | ext2, ext3, ext4 |
 | Windows Server 2012 R2 | x64 | Standard | NTFS |
 
-## 복구 신청 절차
-복구는 사용자의 신청에 따라 운영자가 확인하여 진행합니다. 원활한 처리를 위해 운영자가 사용자에게 연락을 취할 수도 있습니다. 복구 신청 절차는 다음과 같습니다.
+## Application Procedure for Restoration 
+Restoration is processed by user's application, to be followed by operator's confirmation. For flawless processing, the operator may contact users.  
 
-1. 복구할 서버를 선택합니다.
-2. **복구** 탭에서 **복구 신청**을 클릭합니다.
-3. 복구 신청 내용을 작성한 후 **신청**을 클릭합니다.
+1. Select a server to restore. 
+2. Click **Apply for Restoration** in the **Restoration** tab. 
+3. Fill in the content and click **Apply**.
 
-복구를 신청하면, 업무 시간 기준으로 3시간 내에 완료됩니다. 업무 시간 이후라면 다음날 완료됩니다.
+Restoration, when applied, is completed within three business hours, or in the following day, if application is made after business hours. 
 
-복구 작업은 업무 시간(평일 오전 10시~오후 6시)에만 가능하며, 운영자가 확인하여 진행합니다.
+Restoration is available only during business hours (10am to 6pm weekdays), with the operator's confirmation. 
 
-## 과금
-서버가 등록되면 기본 월정액이 과금됩니다. 그리고 등록한 서버의 수와 스토리지 사용량에 따라 추가 요금이 부과됩니다. 월정액의 기본 제공 사양은 서버 2대, 스토리지 사용량 100GB입니다.
+## Charges  
+When a server is registered, basic monthly price shall be charged, with more charges to be added, depending on the number of registered servers and storage volume. Basic monthly prices is applied for two servers and 100GB of storage volume.  
 
-## 참고 사항
-### 백업 소프트웨어
+## Reference  
+### Backup Software
 DELL EMC AVAMAR
 
-### 백업 프로그램 설치 위치
+### Installation Location of Backup Program
 * Linux : /usr/local/avamar
 * Windows : C:\Program Files\avs
 
-### 백업 프로그램 데몬(프로세스) 정보
+### Demonstration (Process) Information 
 * Linux : /usr/local/avamar/bin/avagent.bin
 * Windows : Avamar Backup Client
