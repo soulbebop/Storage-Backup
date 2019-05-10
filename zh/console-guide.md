@@ -3,15 +3,16 @@
 ## 备份agent
 添加备份服务器时，要在目标服务器上安装agent。安装agent时需要用户的域名信息。域名信息可以在**添加服务器**页面中确认。
 
+* 用户的域名
+```
+/TCBackup/{domain-id}
+```
+
 > [参考]  
 > 域是为了把多台服务器分组后管理而使用的备份系统的一个单元。
 > 激活备份服务时会自动创建域。
 > 用户的域名下登记备份服务器时，用agent安装命令的参数，输入域名信息。
-
-<br>
-<img src="http://static.toastoven.net/prod_backup/console_guide/image_01.png"/>
-<br>
-<br>
+>
 
 ### 设置服务器安全组(security group)
 
@@ -28,21 +29,21 @@
 
 * **Linux**
 
-   ```
-   curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh | bash
-   ```
+```
+curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh | bash
+```
 
 
 
 ### 安装备份agent
 
-如果域信息是`/TCBackup_alpha/faL6GUt2nboWNI0a`，则按如下方式安装agent。
+则按如下方式安装agent。
 
 * **Linux**
 
-    ```
-    tcbackup install /TCBackup_alpha/faL6GUt2nboWNI0a
-    ```
+```
+tcbackup install /TCBackup_alpha/faL6GUt2nboWNI0a
+```
 
 * **Windows**
 
@@ -52,54 +53,49 @@
 MC Server : tcbackup1.toastmaker.net
 ```
 
-<br>
-<img src="http://static.toastoven.net/prod_backup/console_guide/image_02.png"/>
-<br>
-<br>
-<br>
 
 ### 重新注册备份agent
 如备份服务器的主机名变更,需重新注册备份agent,命令如下:
 
 * **Linux**
 
-    ```
-    tcbackup re-register
-    ```
+```
+tcbackup re-register
+```
 
 * **Windows**
 
-  下载并运行下面的PowerShell脚本。
+下载并运行下面的PowerShell脚本。
 
-   ```
-   http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
-   ```
+```
+http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
+```
 
 
 ### 关闭备份agent
 如果要短时间暂停备份，可以关闭agent。
 * **Linux**
 
-    ```
-    tcbackup stop
-    ```
+```
+tcbackup stop
+```
 
 * **Windows**
 
-    右键单击系统托盘中的备份agent图标，然后点击**关闭**。
+右键单击系统托盘中的备份agent图标，然后点击**关闭**。
 
 ### 重新启动备份agent
 要重新启已关闭的备份agent，使用以下命令。
 
 * **Linux**
 
-    ```
-    tcbackup restart
-    ```
+```
+tcbackup restart
+```
 
 * **Windows**
 
-    在开始菜单中运行**EMC Avamar > Client**。
+在开始菜单中运行**EMC Avamar > Client**。
 
 
 ## 添加服务器
@@ -110,9 +106,9 @@ MC Server : tcbackup1.toastmaker.net
 
 * **备份路径**
 
-  指定要备份的路径。此时务必准确输入绝对路径。如果输入错误的路径，有可能无法备份或备份的路径有错误。
+指定要备份的路径。此时务必准确输入绝对路径。如果输入错误的路径，有可能无法备份或备份的路径有错误。
 
-  如果把soft link设置为备份路径，则仅备份soft link file。
+如果把soft link设置为备份路径，则仅备份soft link file。
 
 ```
 例如)
@@ -122,11 +118,11 @@ Linux   :   /home/backup
 
 * **备份周期**
 
-  执行备份的周期，可以选择1日间隔或7日间隔。
+执行备份的周期，可以选择1日间隔或7日间隔。
 
 * **备份时间**
 
-  开始备份的时间。以1小时为单位选择备份时间。备份时间建议选择文件更改少，服务器空闲的时间段。实际备份开始时间根据当时的情况可能会存在1小时左右的偏差。
+开始备份的时间。以1小时为单位选择备份时间。备份时间建议选择文件更改少，服务器空闲的时间段。实际备份开始时间根据当时的情况可能会存在1小时左右的偏差。
 
 * **备份保留周期**
 
@@ -147,6 +143,7 @@ Linux   :   /home/backup
 
 > [参考]
 > 根据网络状态和备份数据量,设定为同一个时间启用的多个备份计划任务,如3小时之内不能完成,则该计划任务记录为失败。
+>
 
 ### 更改备份政策
 
@@ -157,25 +154,25 @@ Linux   :   /home/backup
 
 * **备份路径**
 
-  可以选择用户添加过的备份路径之一
+可以选择用户添加过的备份路径之一
 
 * **备份日期**
 
-  可以选择备份日期。如果从未备份或备份失败导致没有备份的数据，则会提示没有可用于恢复的数据。
+可以选择备份日期。如果从未备份或备份失败导致没有备份的数据，则会提示没有可用于恢复的数据。
 
 * **请求事项**
 
-  可以恢复到备份服务器，也可以恢复到新的服务器。
+可以恢复到备份服务器，也可以恢复到新的服务器。
 
-  ```
-  例如)
-  Windows :   c:\backup
-  Linux   :   /home/backup
-  ```
+```
+例如)
+Windows :   c:\backup
+Linux   :   /home/backup
+```
 
 * **联系方式**
 
-  为了顺利进行恢复，输入联系方式用于运营负责人与请求人之间的沟通。我们不存储收集的个人信息，并在恢复完成后立即删除。
+为了顺利进行恢复，输入联系方式用于运营负责人与请求人之间的沟通。我们不存储收集的个人信息，并在恢复完成后立即删除。
 
 恢复进展情况如下表所示。
 
@@ -192,15 +189,16 @@ Linux   :   /home/backup
 
 > [注意]
 > 删除服务器的同时删除保留的备份数据。如需备份数据请提前提交恢复请求，将其还原到所需的服务器上。
+>
 
 从Web控制台删除服务器后，必须中止服务器上的代理并取消注册。否则，无法重新注册服务器。取消命令如下。
 
 * **Linux**
 
-    ```
-    tcbackup uninstall
-    ```
+```
+tcbackup uninstall
+```
 
 * **Windows**
 
-    关闭代理。再次使用时需要打开客户端的激活条目输入新的域信息。
+关闭代理。再次使用时需要打开客户端的激活条目输入新的域信息。
