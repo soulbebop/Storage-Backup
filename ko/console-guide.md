@@ -3,15 +3,16 @@
 ## 백업 에이전트(agent)
 백업할 서버를 등록하려면 먼저 대상 서버에 에이전트(agent)를 설치해야 합니다. 에이전트를 설치할 때는 사용자의 도메인 정보가 필요합니다. 도메인 정보는 **서버 등록** 페이지에서 확인할 수 있습니다.
 
+* 사용자 도메인
+```
+/TCBackup/{domain-id}
+```
+
 > [참고]  
 > 도메인은 많은 수의 서버를 그룹화하여 관리하기 위해 사용하는 백업 시스템의 단위입니다.
 > 도메인은 백업 서비스를 활성화하면 자동으로 생성됩니다.
 > 사용자의 도메인에 백업할 서버를 등록하려면 에이전트 설치 명령의 파라미터로 도메인 정보를 입력합니다.
-
-<br>
-<img src="http://static.toastoven.net/prod_backup/console_guide/image_01.png"/>
-<br>
-<br>
+>
 
 ### 서버 보안 그룹(security group) 설정
 
@@ -28,52 +29,45 @@
 
 * **Linux**
 
-   ```
-   curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh | bash
-   ```
-
+```
+curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh | bash
+```
 
 
 ### 백업 에이전트 설치
 
-도메인 정보가 `/TCBackup_alpha/faL6GUt2nboWNI0a`라면 다음과 같이 에이전트를 설치합니다.
+다음과 같이 에이전트를 설치합니다.
 
 * **Linux**
 
-    ```
-    tcbackup install /TCBackup_alpha/faL6GUt2nboWNI0a
-    ```
+```
+tcbackup install {user-domain}
+```
 
 * **Windows**
 
-  Windows용 에이전트는 [TOAST의 다운로드 페이지](http://docs.toast.com/ko/Download)에서 다운로드해 설치합니다. 설치 중 MC Server와 MC Domain 정보를 입력해야 합니다. MC Domain은 사용자의 도메인 정보입니다. MC Server에는 다음 정보를 입력합니다.
+Windows용 에이전트는 [TOAST의 다운로드 페이지](http://docs.toast.com/ko/Download)에서 다운로드해 설치합니다. 설치 중 MC Server와 MC Domain 정보를 입력해야 합니다. MC Domain은 사용자의 도메인 정보입니다. MC Server에는 다음 정보를 입력합니다.
 
 ```
 MC Server : tcbackup1.toastmaker.net
 ```
-
-<br>
-<img src="http://static.toastoven.net/prod_backup/console_guide/image_02.png"/>
-<br>
-<br>
-<br>
 
 ### 백업 에이전트 재등록
 백업할 서버의 호스트명이 변경되었다면 에이전트를 다시 등록해야 합니다. 재등록 명령은 다음과 같습니다.
 
 * **Linux**
 
-    ```
-    tcbackup re-register
-    ```
+```
+tcbackup re-register
+```
 
 * **Windows**
 
-  아래 PowerShell 스크립트를 다운로드해 실행합니다.
+아래 PowerShell 스크립트를 다운로드해 실행합니다.
 
-   ```
-   http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
-   ```
+```
+http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
+```
 
 
 ### 백업 에이전트 종료
@@ -81,26 +75,26 @@ MC Server : tcbackup1.toastmaker.net
 
 * **Linux**
 
-    ```
-    tcbackup stop
-    ```
+```
+tcbackup stop
+```
 
 * **Windows**
 
-    시스템 트레이에서 백업 에이전트 아이콘을 마우스 오른쪽 버튼으로 클릭한 다음 **종료**를 클릭합니다.
+시스템 트레이에서 백업 에이전트 아이콘을 마우스 오른쪽 버튼으로 클릭한 다음 **종료**를 클릭합니다.
 
 ### 백업 에이전트 재시작
 종료한 백업 에이전트를 다시 시작하려면 다음 명령을 사용합니다.
 
 * **Linux**
 
-    ```
-    tcbackup restart
-    ```
+```
+tcbackup restart
+```
 
 * **Windows**
 
-    시작 메뉴에서 **EMC Avamar > Client**를 실행합니다.
+시작 메뉴에서 **EMC Avamar > Client**를 실행합니다.
 
 
 ## 서버 등록
@@ -111,9 +105,9 @@ MC Server : tcbackup1.toastmaker.net
 
 * **백업 경로**
 
-  백업할 경로를 지정합니다. 절대 경로를 정확히 입력해야 합니다. 경로를 잘못 입력하면 백업이 되지 않거나 원치 않는 경로가 백업될 수 있습니다.
+백업할 경로를 지정합니다. 절대 경로를 정확히 입력해야 합니다. 경로를 잘못 입력하면 백업이 되지 않거나 원치 않는 경로가 백업될 수 있습니다.
 
-  soft link를 백업 경로로 설정하면, soft link file만 백업됩니다.
+soft link를 백업 경로로 설정하면, soft link file만 백업됩니다.
 
 ```
 예시)
@@ -123,15 +117,15 @@ Linux   :   /home/backup
 
 * **백업 주기**
 
-  백업을 수행할 주기입니다. 1일 간격, 7일 간격 중 선택할 수 있습니다.
+백업을 수행할 주기입니다. 1일 간격, 7일 간격 중 선택할 수 있습니다.
 
 * **백업 시각**
 
-  백업을 시작할 시각입니다. 1시간 단위로 선택할 수 있습니다. 파일 변경이 가장 적고, 서버가 유휴 상태인 시각을 권장합니다. 실제 백업 시작은 상황에 따라 최대 1시간 정도 차이가 날 수 있습니다.
+백업을 시작할 시각입니다. 1시간 단위로 선택할 수 있습니다. 파일 변경이 가장 적고, 서버가 유휴 상태인 시각을 권장합니다. 실제 백업 시작은 상황에 따라 최대 1시간 정도 차이가 날 수 있습니다.
 
 * **백업 보관 주기**
 
-  백업된 복제본을 보관할 기간입니다. 7일, 14일, 21일, 30일 중 선택할 수 있습니다.
+백업된 복제본을 보관할 기간입니다. 7일, 14일, 21일, 30일 중 선택할 수 있습니다.
 
 
 ### 백업 경로 목록
@@ -148,6 +142,7 @@ Linux   :   /home/backup
 
 > [참고]
 > 네트워크 상태와 백업 데이터의 용량, 같은 시간에 시작하도록 설정된 많은 백업 일정 등에 의해 3시간 이내에 백업이 완료되지 않으면 해당 일정은 실패로 기록됩니다.
+>
 
 ### 백업 정책 변경
 
@@ -158,25 +153,25 @@ Linux   :   /home/backup
 
 * **백업 경로**
 
-  사용자가 추가했던 백업 경로 중 하나를 선택할 수 있습니다.
+사용자가 추가했던 백업 경로 중 하나를 선택할 수 있습니다.
 
 * **백업 일자**
 
-  복구할 복제본이 백업된 날짜를 선택할 수 있습니다. 한 번도 백업되지 않았거나, 모두 실패하여 복구할 수 있는 백업 데이터가 없다면 복구할 데이터가 없다는 메시지가 표시됩니다.
+복구할 복제본이 백업된 날짜를 선택할 수 있습니다. 한 번도 백업되지 않았거나, 모두 실패하여 복구할 수 있는 백업 데이터가 없다면 복구할 데이터가 없다는 메시지가 표시됩니다.
 
 * **요청 사항**
 
-  복구에 필요한 세부 사항을 자유롭게 요청할 수 있습니다. 백업한 서버에 그대로 복구할 수 있지만 새로운 서버에 복구할 수도 있습니다.
+복구에 필요한 세부 사항을 자유롭게 요청할 수 있습니다. 백업한 서버에 그대로 복구할 수 있지만 새로운 서버에 복구할 수도 있습니다.
 
-  ```
-  예시)
-  복구할 서버의 호스트명   : backup.guide
-  복구할 경로 : /home/debian
-  ```
+```
+예시)
+복구할 서버의 호스트명   : backup.guide
+복구할 경로 : /home/debian
+```
 
 * **연락처**
 
-  원활한 복구를 위해 담당자와 요청자 사이의 대화 채널로 사용할 연락처를 입력합니다. 수집된 개인 정보는 저장하지 않으며 복구를 완료하면 즉각 폐기합니다.
+원활한 복구를 위해 담당자와 요청자 사이의 대화 채널로 사용할 연락처를 입력합니다. 수집된 개인 정보는 저장하지 않으며 복구를 완료하면 즉각 폐기합니다.
 
 복구 진행 상태는 다음 표와 같이 표시됩니다.
 
@@ -193,15 +188,16 @@ Linux   :   /home/backup
 
 > [주의]
 > 서버를 삭제하면 보관된 백업 데이터도 삭제됩니다. 백업 데이터가 필요하다면 미리 복구 요청을 해서 원하는 서버에 복구해야 합니다.
+>
 
 웹 콘솔에서 서버를 삭제한 후에는 반드시 서버에서 에이전트를 정지시키고 등록을 해지해야 합니다. 그렇지 않으면 해당 서버를 다시 등록할 수 없습니다. 해지 명령은 다음과 같습니다.
 
 * **Linux**
 
-    ```
-    tcbackup uninstall
-    ```
+```
+tcbackup uninstall
+```
 
 * **Windows**
 
-    에이전트를 종료합니다. 다음에 다시 사용할 때는 클라이언트 활성화 항목을 열어 새로운 도메인 정보를 입력합니다.
+에이전트를 종료합니다. 다음에 다시 사용할 때는 클라이언트 활성화 항목을 열어 새로운 도메인 정보를 입력합니다.
