@@ -44,7 +44,7 @@ curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bo
 * **Linux**
 
 ```
-tcbackup install /TCBackup_alpha/faL6GUt2nboWNI0a
+tcbackup install {user-domain}
 ```
 
 <br/>
