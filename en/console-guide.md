@@ -14,6 +14,8 @@ To register a backup server, agent must be installed in the server. User's domai
 > To register a backup server in user's domain, enter domain information with the parameter commanding agent installation.
 >
 
+<br/>
+
 ### Security Group Configuration
 
 To communicate with the backup server, add the following to the server security group.
@@ -23,7 +25,7 @@ To communicate with the backup server, add the following to the server security 
 | Ingress/Egress | ALL TCP | 133.186.132.0/24   |
 | Egress           | 443     | 103.243.202.188/32 |
 
-
+<br/>
 
 ### Install Backup CLI
 
@@ -33,7 +35,7 @@ To communicate with the backup server, add the following to the server security 
 curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh | bash
 ```
 
-
+<br/>
 
 ### Install Backup Agent
 
@@ -45,6 +47,8 @@ Install agent as below:
 tcbackup install {user-domain}
 ```
 
+<br/>
+
 * **Windows**
 
 For Windows agent, download from [Downloads of TOAST](http://docs.toast.com/en/Download) and install. MC Server and MC Domain are required for installation: MC Domain refers to user's domain information and MC Server requires the following:  
@@ -52,6 +56,8 @@ For Windows agent, download from [Downloads of TOAST](http://docs.toast.com/en/D
 ```
 MC Server : tcbackup1.toastmaker.net
 ```
+
+<br/>
 
 ### Re-register Backup Agent
 If the host name of backup server has changed, agent needs to be re-registered. Here's the command:
@@ -62,6 +68,8 @@ If the host name of backup server has changed, agent needs to be re-registered. 
 tcbackup re-register
 ```
 
+<br/>
+
 * **Windows**
 
 Download and execute the PowerShell script as below.
@@ -70,6 +78,7 @@ Download and execute the PowerShell script as below.
 http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
 ```
 
+<br/>
 
 ### Close Backup Agent
 To suspend backup for a while, you can close an agent.
@@ -80,9 +89,13 @@ To suspend backup for a while, you can close an agent.
 tcbackup stop
 ```
 
+<br/>
+
 * **Windows**
 
 Right-click the backup agent icon in the system tray and press **Close**.
+
+<br/>
 
 ### Restart Backup Agent
 To restart the closed backup agent, use the following command:
@@ -93,22 +106,25 @@ To restart the closed backup agent, use the following command:
 tcbackup restart
 ```
 
+<br/>
+
 * **Windows**
 
 Execute **EMC Avamar > Client** on the start menu.
 
+<br/>
 
 ## Register Server
 Install agent in the backup server and select a server in which agent is registered from **Select Servers** in **Register Servers**.
+
+<br/>
 
 ### Add Backup Routes
 Many backup routes can be added to a server: adding routes is available after server registration is completed.
 
 * **Backup Routes**
 
-Specify a route for backup. Make sure the route is entered correctly; otherwise, backup may fail or end up in a wrong route.
-
-When soft link is set as the backup route, only soft link file is backed up.
+Specify a route for backup. Make sure the route is entered correctly; otherwise, backup may fail or end up in a wrong route. When soft link is set as the backup route, only soft link file is backed up.
 
 ```
 e.g)
@@ -116,21 +132,30 @@ Windows :   c:\backup
 Linux   :   /home/backup
 ```
 
+<br/>
+
 * **Backup Cycle**
 
 Cycle of backup execution: choose either daily or weekly.
+
+<br/>
 
 * **Backup Time**
 
 Start time of backup: select by the hour. It is recommended to select time when file change is the least and server is idle. Actual backup start time may differ up to 1 hour, depending on the situation.
 
+<br/>
+
 * **Retention Cycle**
 
 Retention period for backed up copies: choose one of 7 days, 14 days, 21 days, or 30 days.
 
+<br/>
 
 ### List of Backup Routes
 Check the server name on the left of the server list, and backup routes of the selected server will be listed at the bottom of the page.   
+
+<br/>
 
 ### Retrieve Results
 Click a backup route on the list to retrieve the result of backup, which is collected within half an hour to the latest, after backup completion time.  
@@ -145,9 +170,13 @@ Click a backup route on the list to retrieve the result of backup, which is coll
 > If a backup is not done within three hours, due to network status, volume of backup data, and lots of backup schedule configured to start all at once, it shall be recorded as a failure.
 >
 
+<br/>
+
 ### Change of Backup Policy
 
 Click **Change** on the right of each item from the list of backup routes to change backup policy: items available to change are `Backup Cycle`, `Backup Time`, `Retention Cycle`.
+
+<br/>
 
 ## Apply for Restoration
 If a registered backup route has been backed up more than once, restoration of data can be applied.
@@ -156,9 +185,13 @@ If a registered backup route has been backed up more than once, restoration of d
 
 User can select one of the added backup routes.   
 
+<br/>
+
 * **Backup Date**
 
 Select a date when a copy to restore was backed up. When there is no backup data since all has failed, message will show there is no data to restore.
+
+<br/>
 
 * **Requests**
 
@@ -166,9 +199,11 @@ Feel free to request for details required for restoration. Restoration can be ma
 
 ```
 e.g)
-Windows :   c:\backup
-Linux   :   /home/backup
+Host name of the server to recover  : backup.guide
+Path to recover : /home/debian
 ```
+
+<br/>
 
 * **Contact **
 
@@ -182,6 +217,7 @@ Restoration status is displayed as below:
 | Processing | Operator started restoration.                  |
 | Completed  | Restoration has been completed.                |
 
+<br/>
 
 ## Delete Servers
 
@@ -197,6 +233,8 @@ After a server is deleted from the web console, stop agent from the server and c
 ```
 tcbackup uninstall
 ```
+
+<br/>
 
 * **Windows**
 
