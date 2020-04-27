@@ -28,11 +28,11 @@ TOAST备份服务提供Web控制台环境，这样您可以轻松的添加备份
 TOAST支持的操作系统如下。
 
 | 操作系统 | 硬件架构 | 支持的版本 | 支持的文件系统 |
-| ---------------- | --------------------- | ------------------------ | ------------------------ |
-| CentOS | x64 | 6.5, 7.1 | ext2, ext3, ext4, xfs |
-| Debian | x64 | 8.2.0 | ext2, ext3, ext4 |
-| Ubuntu | x64 | 14.04 LTS | ext2, ext3, ext4 |
-| Windows Server 2012 R2 | x64 | Standard | NTFS |
+| --- | --- | --- | --- |
+| CentOS | x64 | 6.10, 7.5 | ext2, ext3, ext4, xfs |
+| Ubuntu | x64 | 16.04 LTS<br/>18.04 LTS | ext2, ext3, ext4 |
+| Debian | x64 | 9, 10 | ext2, ext3, ext4 |
+| Windows Server | x64 | 2012 R2 STD<br/>2016 STD<br/>2019 STD | NTFS |
 
 ## 恢复申请程序
 运营负责人根据用户的要求确认恢复。为了方便确认处理，运营负责人有可能会给用户致电。申请恢复的流程如下。
