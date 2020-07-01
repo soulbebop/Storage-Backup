@@ -82,7 +82,7 @@ tcbackup re-register
 
 Download and execute the PowerShell script as below.
 
-http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
+[re-register.ps1](http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1)
 
 <br/>
 

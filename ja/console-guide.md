@@ -82,7 +82,8 @@ tcbackup re-register
 
 下記のPowerShellスクリプトをダウンロードして実行します。
 
-http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
+[re-register.ps1](http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1)
+
 
 <br/>
 
