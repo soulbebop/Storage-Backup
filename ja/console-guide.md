@@ -20,10 +20,12 @@
 
 バックアップサーバーと通信するには、サーバーセキュリティーグループに下記の内容を追加します。
 
-| 方向(direction)        | ポート      | CIDR               |
-| ---------------- | ------- | ------------------ |
-| Ingress/Egress | ALL TCP | 133.223.17.0/24  |
-| Egress           | 443     | 119.235.231.50/32 |
+| 方向(direction) | ポート  | リージョン | CIDR |
+| --- | --- | --- | --- |
+| Ingress/Egress | ALL TCP | 韓国(パンギョ) | 133.186.132.0/24 |
+| | | 日本(東京) | 133.223.17.0/24 |
+| Egress | 443 | 韓国(パンギョ) | 103.243.202.188/32 |
+| | | 日本(東京) | 119.235.231.50/32 |
 
 <br/>
 
@@ -33,8 +35,8 @@
 
 | リージョン | URL |
 | --- | --- |
-| KR1 | http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
-| JP1 | http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
+| 韓国(パンギョ) | http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
+| 日本(東京) | http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
 
 ```
 curl {URL} | bash
@@ -60,8 +62,8 @@ Windows用エージェントは、[TOASTのダウンロードページ](http://d
 
 | リージョン | MC Server |
 | --- | --- |
-| KR1 | tcbackup1.toastmaker.net |
-| JP1 | tcbackup.nhn-japan.com |
+| 韓国(パンギョ) | tcbackup1.toastmaker.net |
+| 日本(東京) | tcbackup.nhn-japan.com |
 
 <br/>
 
@@ -80,9 +82,7 @@ tcbackup re-register
 
 下記のPowerShellスクリプトをダウンロードして実行します。
 
-```
 http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
-```
 
 <br/>
 

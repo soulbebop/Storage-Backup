@@ -20,10 +20,12 @@
 
 백업 서버와 통신하려면 서버 보안 그룹에 아래 내용을 추가합니다.
 
-| 방향(direction) | 포트 | CIDR |
-| --- | --- | --- |
-| Ingress/Egress | ALL TCP | KR1: 133.186.132.0/24<br/>JP1: 133.223.17.0/24 |
-| Egress | 443 | KR1: 103.243.202.188/32<br/>JP1: 119.235.231.50/32 |
+| 방향(direction) | 포트 | 리전 | CIDR |
+| --- | --- | --- | --- |
+| Ingress/Egress | ALL TCP | 한국(판교) | 133.186.132.0/24 |
+| | | 일본(도쿄) | 133.223.17.0/24 |
+| Egress | 443 | 한국(판교) | 103.243.202.188/32 |
+| | | 일본(도쿄) | 119.235.231.50/32 |
 
 <br/>
 
@@ -33,8 +35,8 @@
 
 | 리전 | URL |
 | --- | --- |
-| KR1 | http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
-| JP1 | http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
+| 한국(판교) | http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
+| 일본(도쿄) | http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
 
 ```
 curl {URL} | bash
@@ -60,8 +62,8 @@ Windows용 에이전트는 [TOAST의 다운로드 페이지](http://docs.toast.c
 
 | 리전 | MC Server |
 | --- | --- |
-| KR1 | tcbackup1.toastmaker.net |
-| JP1 | tcbackup.nhn-japan.com |
+| 한국(판교) | tcbackup1.toastmaker.net |
+| 일본(도쿄) | tcbackup.nhn-japan.com |
 
 <br/>
 
@@ -80,9 +82,7 @@ tcbackup re-register
 
 아래 PowerShell 스크립트를 다운로드해 실행합니다.
 
-```
 http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
-```
 
 <br/>
 
