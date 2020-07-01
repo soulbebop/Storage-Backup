@@ -31,8 +31,13 @@
 
 * **Linux**
 
+| リージョン | URL |
+| --- | --- |
+| KR1 | http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
+| JP1 | http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
+
 ```
-curl http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh | bash
+curl {URL} | bash
 ```
 
 <br/>
@@ -53,9 +58,10 @@ tcbackup install {user-domain}
 
 Windows用エージェントは、[TOASTのダウンロードページ](http://docs.toast.com/ja/Download)からダウンロードしてインストールします。インストール中、 MC ServerとMC Domain情報を入力する必要があります。MC Domainはユーザーのドメイン情報です。MC Serverには次の情報を入力します。
 
-```
-MC Server : tcbackup.nhn-japan.com
-```
+| リージョン | MC Server |
+| --- | --- |
+| KR1 | tcbackup1.toastmaker.net |
+| JP1 | tcbackup.nhn-japan.com |
 
 <br/>
 

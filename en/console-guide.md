@@ -31,8 +31,13 @@ To communicate with the backup server, add the following to the server security 
 
 * **Linux**
 
+| Region | URL |
+| --- | --- |
+| KR1 | http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
+| JP1 | http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
+
 ```
-curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh | bash
+curl {URL} | bash
 ```
 
 <br/>
@@ -53,9 +58,10 @@ tcbackup install {user-domain}
 
 For Windows agent, download from [Downloads of TOAST](http://docs.toast.com/en/Download) and install. MC Server and MC Domain are required for installation: MC Domain refers to user's domain information and MC Server requires the following:  
 
-```
-MC Server : tcbackup1.toastmaker.net
-```
+| Region | MC Server |
+| --- | --- |
+| KR1 | tcbackup1.toastmaker.net |
+| JP1 | tcbackup.nhn-japan.com |
 
 <br/>
 

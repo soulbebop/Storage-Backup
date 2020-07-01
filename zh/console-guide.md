@@ -31,8 +31,13 @@
 
 * **Linux**
 
+| Region | URL |
+| --- | --- |
+| KR1 | http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
+| JP1 | http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
+
 ```
-curl http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh | bash
+curl {URL} | bash
 ```
 
 <br/>
@@ -53,9 +58,10 @@ tcbackup install {user-domain}
 
 从 [TOAST下载页面](http://docs.toast.com/zh/Download)下载windows agent并安装。安装时需要输入MC Server和MC Domain信息。MC Domain是用户的域信息。在 MC Server中需要输入以下信息。
 
-```
-MC Server : tcbackup1.toastmaker.net
-```
+| Region | MC Server |
+| --- | --- |
+| KR1 | tcbackup1.toastmaker.net |
+| JP1 | tcbackup.nhn-japan.com |
 
 <br/>
 
