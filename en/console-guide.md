@@ -20,10 +20,12 @@ To register a backup server, agent must be installed in the server. User's domai
 
 To communicate with the backup server, add the following to the server security group.
 
-| Direction       | Port | CIDR               |
-| ---------------- | ------- | ------------------ |
-| Ingress/Egress | ALL TCP | KR1: 133.186.132.0/24<br/>JP1: 133.223.17.0/24 |
-| Egress | 443 | KR1: 103.243.202.188/32<br/>JP1: 119.235.231.50/32 |
+| Direction | Port | Region | CIDR |
+| --- | --- | --- | --- |
+| Ingress/Egress | ALL TCP | KOREA (Pangyo) | 133.186.132.0/24 |
+| | | JAPAN (Tokyo) | 133.223.17.0/24 |
+| Egress | 443 | KOREA (Pangyo) | 103.243.202.188/32 |
+| | | JAPAN (Tokyo) | 119.235.231.50/32 |
 
 <br/>
 
@@ -33,8 +35,8 @@ To communicate with the backup server, add the following to the server security 
 
 | Region | URL |
 | --- | --- |
-| KR1 | http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
-| JP1 | http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
+| KOREA (Pangyo) | http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
+| JAPAN (Tokyo) | http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
 
 ```
 curl {URL} | bash
@@ -60,8 +62,8 @@ For Windows agent, download from [Downloads of TOAST](http://docs.toast.com/en/D
 
 | Region | MC Server |
 | --- | --- |
-| KR1 | tcbackup1.toastmaker.net |
-| JP1 | tcbackup.nhn-japan.com |
+| KOREA (Pangyo) | tcbackup1.toastmaker.net |
+| JAPAN (Tokyo) | tcbackup.nhn-japan.com |
 
 <br/>
 
@@ -80,9 +82,7 @@ tcbackup re-register
 
 Download and execute the PowerShell script as below.
 
-```
 http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
-```
 
 <br/>
 

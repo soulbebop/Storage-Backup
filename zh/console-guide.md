@@ -20,10 +20,12 @@
 
 如需与备份服务器通信，请在服务器安全组添加以下内容。
 
-| 方向(direction)        | 端口      | CIDR               |
-| ---------------- | ------- | ------------------ |
-| Ingress/Egress | ALL TCP | KR1: 133.186.132.0/24<br/>JP1: 133.223.17.0/24 |
-| Egress | 443 | KR1: 103.243.202.188/32<br/>JP1: 119.235.231.50/32 |
+| 方向(direction) | 端口 | 地区 | CIDR |
+| --- | --- | --- | --- |
+| Ingress/Egress | ALL TCP | 韩国（板桥） | 133.186.132.0/24 |
+| | | 日本（东京） | 133.223.17.0/24 |
+| Egress | 443 | 韩国（板桥） | 103.243.202.188/32 |
+| | | 日本（东京） | 119.235.231.50/32 |
 
 <br/>
 
@@ -31,10 +33,10 @@
 
 * **Linux**
 
-| Region | URL |
+| 地区 | URL |
 | --- | --- |
-| KR1 | http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
-| JP1 | http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
+| 韩国（板桥） | http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
+| 日本（东京） | http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
 
 ```
 curl {URL} | bash
@@ -58,10 +60,10 @@ tcbackup install {user-domain}
 
 从 [TOAST下载页面](http://docs.toast.com/zh/Download)下载windows agent并安装。安装时需要输入MC Server和MC Domain信息。MC Domain是用户的域信息。在 MC Server中需要输入以下信息。
 
-| Region | MC Server |
+| 地区 | MC Server |
 | --- | --- |
-| KR1 | tcbackup1.toastmaker.net |
-| JP1 | tcbackup.nhn-japan.com |
+| 韩国（板桥） | tcbackup1.toastmaker.net |
+| 日本（东京） | tcbackup.nhn-japan.com |
 
 <br/>
 
@@ -80,9 +82,7 @@ tcbackup re-register
 
 下载并运行下面的PowerShell脚本。
 
-```
 http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
-```
 
 <br/>
 
