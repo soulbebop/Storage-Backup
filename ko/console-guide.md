@@ -23,8 +23,10 @@
 | 방향(direction) | 포트 | 리전 | CIDR |
 | --- | --- | --- | --- |
 | Ingress/Egress | ALL TCP | 한국(판교) | 133.186.132.0/24 |
+| | | 한국(평촌) | 133.186.207.4/32, 133.186.207.5/32 |
 | | | 일본(도쿄) | 133.223.17.0/24 |
 | Egress | 443 | 한국(판교) | 103.243.202.188/32 |
+| | | 한국(평촌) | 103.243.202.188/32 |
 | | | 일본(도쿄) | 119.235.231.50/32 |
 
 <br/>
@@ -36,6 +38,7 @@
 | 리전 | URL |
 | --- | --- |
 | 한국(판교) | http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
+| 한국(평촌) | http://static.toastoven.net/toastcloud/sdk_download/backup/kr2/scripts/linux/bootstrap.sh |
 | 일본(도쿄) | http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
 
 ```
@@ -63,6 +66,7 @@ Windows용 에이전트는 [TOAST의 다운로드 페이지](http://docs.toast.c
 | 리전 | MC Server |
 | --- | --- |
 | 한국(판교) | tcbackup1.toastmaker.net |
+| 한국(평촌) | kr2-backup-mc1.cloud.toast.com |
 | 일본(도쿄) | tcbackup.nhn-japan.com |
 
 <br/>
