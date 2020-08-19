@@ -23,8 +23,10 @@
 | 方向(direction) | 端口 | 地区 | CIDR |
 | --- | --- | --- | --- |
 | Ingress/Egress | ALL TCP | 韩国（板桥） | 133.186.132.0/24 |
+| | | 韩国（坪村） | 133.186.207.4/32, 133.186.207.5/32 |
 | | | 日本（东京） | 133.223.17.0/24 |
 | Egress | 443 | 韩国（板桥） | 103.243.202.188/32 |
+| | | 韩国（坪村） | 103.243.202.188/32 |
 | | | 日本（东京） | 119.235.231.50/32 |
 
 <br/>
@@ -36,6 +38,7 @@
 | 地区 | URL |
 | --- | --- |
 | 韩国（板桥） | http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
+| 韩国（坪村） | http://static.toastoven.net/toastcloud/sdk_download/backup/kr2/scripts/linux/bootstrap.sh |
 | 日本（东京） | http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
 
 ```
@@ -63,6 +66,7 @@ tcbackup install {user-domain}
 | 地区 | MC Server |
 | --- | --- |
 | 韩国（板桥） | tcbackup1.toastmaker.net |
+| 韩国（坪村） | kr2-backup-mc1.cloud.toast.com |
 | 日本（东京） | tcbackup.nhn-japan.com |
 
 <br/>

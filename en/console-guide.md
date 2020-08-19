@@ -23,8 +23,10 @@ To communicate with the backup server, add the following to the server security 
 | Direction | Port | Region | CIDR |
 | --- | --- | --- | --- |
 | Ingress/Egress | ALL TCP | KOREA (Pangyo) | 133.186.132.0/24 |
+| | | KOREA (Pyeongchon) | 133.186.207.4/32, 133.186.207.5/32 |
 | | | JAPAN (Tokyo) | 133.223.17.0/24 |
 | Egress | 443 | KOREA (Pangyo) | 103.243.202.188/32 |
+| | | KOREA (Pyeongchon) | 103.243.202.188/32 |
 | | | JAPAN (Tokyo) | 119.235.231.50/32 |
 
 <br/>
@@ -36,6 +38,7 @@ To communicate with the backup server, add the following to the server security 
 | Region | URL |
 | --- | --- |
 | KOREA (Pangyo) | http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
+| KOREA (Pyeongchon) | http://static.toastoven.net/toastcloud/sdk_download/backup/kr2/scripts/linux/bootstrap.sh |
 | JAPAN (Tokyo) | http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
 
 ```
@@ -63,6 +66,7 @@ For Windows agent, download from [Downloads of TOAST](http://docs.toast.com/en/D
 | Region | MC Server |
 | --- | --- |
 | KOREA (Pangyo) | tcbackup1.toastmaker.net |
+| KOREA (Pyeongchon) | kr2-backup-mc1.cloud.toast.com |
 | JAPAN (Tokyo) | tcbackup.nhn-japan.com |
 
 <br/>
