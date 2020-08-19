@@ -23,8 +23,10 @@
 | 方向(direction) | ポート  | リージョン | CIDR |
 | --- | --- | --- | --- |
 | Ingress/Egress | ALL TCP | 韓国(パンギョ) | 133.186.132.0/24 |
+| | | 韓国(ピョンチョン) | 133.186.207.4/32, 133.186.207.5/32 |
 | | | 日本(東京) | 133.223.17.0/24 |
 | Egress | 443 | 韓国(パンギョ) | 103.243.202.188/32 |
+| | | 韓国(ピョンチョン) | 103.243.202.188/32 |
 | | | 日本(東京) | 119.235.231.50/32 |
 
 <br/>
@@ -36,6 +38,7 @@
 | リージョン | URL |
 | --- | --- |
 | 韓国(パンギョ) | http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
+| 韓国(ピョンチョン) | http://static.toastoven.net/toastcloud/sdk_download/backup/kr2/scripts/linux/bootstrap.sh |
 | 日本(東京) | http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
 
 ```
@@ -63,6 +66,7 @@ Windows用エージェントは、[TOASTのダウンロードページ](http://d
 | リージョン | MC Server |
 | --- | --- |
 | 韓国(パンギョ) | tcbackup1.toastmaker.net |
+| 韓国(ピョンチョン) | kr2-backup-mc1.cloud.toast.com |
 | 日本(東京) | tcbackup.nhn-japan.com |
 
 <br/>
