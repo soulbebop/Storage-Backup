@@ -30,7 +30,7 @@ TOASTでサポートするオペレーションシステムは次のとおりで
 | オペレーションシステム | ハードウェアアーキテクチャ | サポートバージョン | サポート構成 |
 | --- | --- | --- | --- |
 | CentOS | x64 | 6.10, 7.5 | ext2, ext3, ext4, xfs |
-| Ubuntu | x64 | 16.04 LTS<br/>8.04 LTS | ext2, ext3, ext4 |
+| Ubuntu | x64 | 16.04 LTS<br/>18.04 LTS | ext2, ext3, ext4 |
 | Debian | x64 | 9, 10 | ext2, ext3, ext4 |
 | Windows Server | x64 | 2012 R2 STD<br/>2016 STD<br/>2019 STD | NTFS |
 
