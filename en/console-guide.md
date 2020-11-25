@@ -158,7 +158,7 @@ Start time of backup: select by the hour. It is recommended to select time when 
 
 * **Retention Cycle**
 
-Retention period for backed up copies: choose one of 7 days, 14 days, 21 days, or 30 days.
+Retention period for backed up copies: choose one of 7 days, 14 days, 21 days, 30 days, 6 months(180 days), 1 year(365 days), 3 years(1095 days) or 5 years(1825 days).
 
 <br/>
 
@@ -168,7 +168,7 @@ Check the server name on the left of the server list, and backup routes of the s
 <br/>
 
 ### Retrieve Results
-Click a backup route on the list to retrieve the result of backup, which is collected within half an hour to the latest, after backup completion time.  
+Click a backup route on the list to retrieve the result of backup, which is collected within an hour to the latest, after backup completion time.  
 
 | Backup Result             | Description                                                  |
 | ------------------------- | ------------------------------------------------------------ |
