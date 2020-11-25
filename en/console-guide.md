@@ -125,7 +125,7 @@ Execute **EMC Avamar > Client** on the start menu.
 <br/>
 
 ## Register Server
-백업할 서버에 에이전트를 설치하면 **서버 등록** 화면의 **서버 선택** 항목에서 에이전트가 등록된 서버의 호스트 이름을 선택할 수 있습니다. 이미 등록한 서버는 선택 목록에서 제외됩니다.
+Install agent in the backup server and select a server in which agent is registered from **Select Servers** in **Register Servers**.
 
 <br/>
 
