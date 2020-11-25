@@ -54,7 +54,7 @@ tcbackup install {user-domain}
 For Windows agent, download from [Downloads of TOAST](http://docs.toast.com/en/Download) and install. MC Server and MC Domain are required for installation: MC Domain refers to user's domain information and MC Server requires the following:  
 
 ```
-MC Server : tc0backup-dev.toastmaker.net
+MC Server : tc0backup.toastmaker.net
 ```
 
 <br/>

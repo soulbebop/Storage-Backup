@@ -54,7 +54,7 @@ tcbackup install {user-domain}
 Windows用エージェントは、[TOASTのダウンロードページ](http://docs.toast.com/ja/Download)からダウンロードしてインストールします。インストール中、 MC ServerとMC Domain情報を入力する必要があります。MC Domainはユーザーのドメイン情報です。MC Serverには次の情報を入力します。
 
 ```
-MC Server : tc0backup-dev.toastmaker.net
+MC Server : tc0backup.toastmaker.net
 ```
 
 <br/>

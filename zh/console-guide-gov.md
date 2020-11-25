@@ -54,7 +54,7 @@ tcbackup install {user-domain}
 从 [TOAST下载页面](http://docs.toast.com/zh/Download)下载windows agent并安装。安装时需要输入MC Server和MC Domain信息。MC Domain是用户的域信息。在 MC Server中需要输入以下信息。
 
 ```
-MC Server : tc0backup-dev.toastmaker.net
+MC Server : tc0backup.toastmaker.net
 ```
 
 <br/>
