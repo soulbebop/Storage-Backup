@@ -54,7 +54,7 @@ tcbackup install {user-domain}
 从 [TOAST下载页面](http://docs.toast.com/zh/Download)下载windows agent并安装。安装时需要输入MC Server和MC Domain信息。MC Domain是用户的域信息。在 MC Server中需要输入以下信息。
 
 ```
-MC Server : tc0backup-dev.toastmaker.net
+MC Server : tc0backup.toastmaker.net
 ```
 
 <br/>
@@ -115,7 +115,7 @@ tcbackup restart
 <br/>
 
 ## 添加服务器
-备份服务器安装agent后，则可以从**添加服务器**页面的**选择服务器** 项中选择该服务器
+备份服务器安装agent后，则可以从**添加服务器**页面的**选择服务器** 项中选择该服务器。
 
 <br/>
 
@@ -148,7 +148,7 @@ Linux   :   /home/backup
 
 * **备份保留周期**
 
-备份保留周期可选择7日，14日，21日，30日。
+备份保留周期可选择7日，14日，21日，30日，6月(180日)，1年(365日)，3年(1095日)，5年(1825日)。
 
 <br/>
 
@@ -158,7 +158,7 @@ Linux   :   /home/backup
 <br/>
 
 ### 查看备份结果
-在备份路径目录中点击备份路径可查看备份结果。备份结果将在备份完成后的30分钟内汇总。
+在备份路径目录中点击备份路径可查看备份结果。备份结果将在备份完成后的1時間钟内汇总。
 
 | 备份结果  | 详情                        |
 | ------ | --------------------------- |
