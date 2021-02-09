@@ -20,10 +20,9 @@ To register a backup server, agent must be installed in the server. User's domai
 
 To communicate with the backup server, add the following to the server security group.
 
-| Direction       | Port | CIDR               |
-| ---------------- | ------- | ------------------ |
-| Ingress/Egress | ALL TCP | 133.186.132.0/24   |
-| Egress           | 443     | 103.243.202.188/32 |
+| Direction | Port | CIDR |
+| --- | --- | --- |
+| Ingress/Egress | ALL TCP | 211.180.235.123/24<br/>211.180.235.124/24 |
 
 <br/>
 
