@@ -2,9 +2,9 @@
 
 Backup refers to creating and safely saving copies, in preparation against potential data loss, out of security threats, user's operational mistakes, failure in saving devices, or natural disasters. Saved copies may be used to restore data.  
 
-TOAST Backup adopts both Full Backup and Incremental Backup. The initial backup regards the entire data of routes that user registered. In later times, only changes since the last backup are contained, by using variable-length deduplication, which can minimize backup data by removing duplicates.  Therefore, time, as well as network usage volume, can be saved. Data, meanwhile, is encrypted and safely transmitted to the backup storage.
+NHN Cloud Backup adopts both Full Backup and Incremental Backup. The initial backup regards the entire data of routes that user registered. In later times, only changes since the last backup are contained, by using variable-length deduplication, which can minimize backup data by removing duplicates.  Therefore, time, as well as network usage volume, can be saved. Data, meanwhile, is encrypted and safely transmitted to the backup storage.
 
-TOAST Backup provides a web console environment, in which backup policy is conveniently registered, history is retrieved, and requests for backup are made.
+NHN Cloud Backup provides a web console environment, in which backup policy is conveniently registered, history is retrieved, and requests for backup are made.
 
 ## Service Features
 * Supports various operating systems;
@@ -24,8 +24,8 @@ Choose one of 7 days, 14 days, 21 days, or 30 days.
 ### Retrieve Results
 User can retrieve backup results in the web console within half an hour to the latest, after backup is completed. User shall be reported by email on failure of backup. If a backup is not done for up to three hours, it shall be recorded as a failure.
 
-## Operating Systems Supported by TOAST
-TOAST supports the following operating systems:
+## Operating Systems Supported by NHN Cloud
+NHN Cloud supports the following operating systems:
 
 | OS | Hardware Architecture | Supportive Version | Supportive Configuration |
 | --- | --- | --- | --- |
