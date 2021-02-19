@@ -22,7 +22,7 @@
 
 | 方向(direction) | ポート | CIDR |
 | --- | --- | --- |
-| Ingress/Egress | ALL TCP | 211.180.235.123/24<br/>211.180.235.124/24 |
+| Ingress/Egress | ALL TCP | 211.180.235.123/32<br/>211.180.235.124/32 |
 
 <br/>
 
