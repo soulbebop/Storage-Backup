@@ -61,7 +61,7 @@ tcbackup install {user-domain}
 
 * **Windows**
 
-从 [TOAST下载页面](http://docs.toast.com/zh/Download)下载windows agent并安装。安装时需要输入MC Server和MC Domain信息。MC Domain是用户的域信息。在 MC Server中需要输入以下信息。
+从 [NHN Cloud下载页面](http://docs.toast.com/zh/Download)下载windows agent并安装。安装时需要输入MC Server和MC Domain信息。MC Domain是用户的域信息。在 MC Server中需要输入以下信息。
 
 | 地区 | MC Server |
 | --- | --- |
