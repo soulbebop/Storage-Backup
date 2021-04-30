@@ -24,13 +24,13 @@ NHN Cloud 백업 서비스는 간편하게 백업 정책을 등록하고, 백업
 ### 백업 결과 조회
 사용자는 백업 완료 시각으로부터 최대 30분 이내에 웹 콘솔에서 백업 결과를 조회할 수 있습니다. 만약 백업에 실패했다면 사용자의 메일로 실패 내용이 보고됩니다. 최대 3시간 동안 백업되지 않으면 실패로 기록됩니다.
 
-## NHN Cloud에서 지원하는 운영체제
+## 지원하는 운영체제
 NHN Cloud에서 지원하는 운영체제는 다음과 같습니다.
 
 | 운영체제 | 하드웨어 아키텍처 | 지원 버전 | 지원 구성 |
 | --- | --- | --- | --- |
-| CentOS | x64 | 6.10, 7.5 | ext2, ext3, ext4, xfs |
-| Ubuntu | x64 | 16.04 LTS<br/>18.04 LTS | ext2, ext3, ext4 |
+| CentOS | x64 | 7.8 | ext2, ext3, ext4, xfs |
+| Ubuntu | x64 | 18.04 LTS<br/>20.04 LTS | ext2, ext3, ext4 |
 | Debian | x64 | 9, 10 | ext2, ext3, ext4 |
 | Windows Server | x64 | 2012 R2 STD<br/>2016 STD<br/>2019 STD | NTFS |
 

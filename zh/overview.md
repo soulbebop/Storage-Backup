@@ -24,13 +24,13 @@ NHN Cloud备份服务提供Web控制台环境，这样您可以轻松的添加�
 ### 查看备份结果
 用户可以在备份完成时间后的30分钟之内在Web控制台查看备份结果。如果备份失败用户将收到备份失败的邮件。如果3小时备份未完成，则认为备份失败。
 
-## NHN Cloud支持的操作系统
+## 支持的操作系统
 NHN Cloud支持的操作系统如下。
 
 | 操作系统 | 硬件架构 | 支持的版本 | 支持的文件系统 |
 | --- | --- | --- | --- |
-| CentOS | x64 | 6.10, 7.5 | ext2, ext3, ext4, xfs |
-| Ubuntu | x64 | 16.04 LTS<br/>18.04 LTS | ext2, ext3, ext4 |
+| CentOS | x64 | 7.8 | ext2, ext3, ext4, xfs |
+| Ubuntu | x64 | 18.04 LTS<br/>20.04 LTS | ext2, ext3, ext4 |
 | Debian | x64 | 9, 10 | ext2, ext3, ext4 |
 | Windows Server | x64 | 2012 R2 STD<br/>2016 STD<br/>2019 STD | NTFS |
 

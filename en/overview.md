@@ -24,13 +24,13 @@ Choose one of 7 days, 14 days, 21 days, or 30 days.
 ### Retrieve Results
 User can retrieve backup results in the web console within half an hour to the latest, after backup is completed. User shall be reported by email on failure of backup. If a backup is not done for up to three hours, it shall be recorded as a failure.
 
-## Operating Systems Supported by NHN Cloud
+## Supported Operating Systems
 NHN Cloud supports the following operating systems:
 
 | OS | Hardware Architecture | Supportive Version | Supportive Configuration |
 | --- | --- | --- | --- |
-| CentOS | x64 | 6.10, 7.5 | ext2, ext3, ext4, xfs |
-| Ubuntu | x64 | 16.04 LTS<br/>18.04 LTS | ext2, ext3, ext4 |
+| CentOS | x64 | 7.8 | ext2, ext3, ext4, xfs |
+| Ubuntu | x64 | 18.04 LTS<br/>20.04 LTS | ext2, ext3, ext4 |
 | Debian | x64 | 9, 10 | ext2, ext3, ext4 |
 | Windows Server | x64 | 2012 R2 STD<br/>2016 STD<br/>2019 STD | NTFS |
 
