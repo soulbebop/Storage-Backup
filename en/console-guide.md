@@ -132,6 +132,12 @@ Install agent in the backup server and select a server in which agent is registe
 ### Add Backup Routes
 Many backup routes can be added to a server: adding routes is available after server registration is completed.
 
+> [Caution]
+> So as to not put a strain on the server, backup is conducted slowly in the background.
+> **If 1TB or more of bulk data** or **1 million or more of numbers of files are exceeded**when backing up, more than 3 hours can be spent, leading to backup failure.
+> We recommend that you back up in serial order by dividing the paths if a backup path exceeds a standard amount.
+> In case of>NAS(offline) product data or large-capacity data backup, we recommend that you contact the customer service center.
+
 * **Backup Routes**
 
 Specify a route for backup. Make sure the route is entered correctly; otherwise, backup may fail or end up in a wrong route. When soft link is set as the backup route, only soft link file is backed up.
