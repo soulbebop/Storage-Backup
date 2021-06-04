@@ -136,7 +136,7 @@ Many backup routes can be added to a server: adding routes is available after se
 > So as to not put a strain on the server, backup is conducted slowly in the background.
 > **If 1TB or more of bulk data** or **1 million or more of numbers of files are exceeded**when backing up, more than 3 hours can be spent, leading to backup failure.
 > We recommend that you back up in serial order by dividing the paths if a backup path exceeds a standard amount.
-> In case of>NAS(offline) product data or large-capacity data backup, we recommend that you contact the customer service center.
+> In case of NAS(offline) product data or large-capacity data backup, we recommend that you contact the customer service center.
 
 * **Backup Routes**
 
