@@ -129,14 +129,14 @@ Install agent in the backup server and select a server in which agent is registe
 
 <br/>
 
-### Add Backup Routes
-Many backup routes can be added to a server: adding routes is available after server registration is completed.
+### Add Backup Plan
+Multiple backup plans can be added to one server. Backup plan can be added even after completing the server registration.
 
 > [Caution]
 > So as to not put a strain on the server, backup is conducted slowly in the background.
 > **If 1TB or more of bulk data** or **1 million or more of numbers of files are exceeded**when backing up, more than 3 hours can be spent, leading to backup failure.
 > We recommend that you back up in serial order by dividing the paths if a backup path exceeds a standard amount.
-> In case of>NAS(offline) product data or large-capacity data backup, we recommend that you contact the customer service center.
+> In case of NAS(offline) product data or large-capacity data backup, we recommend that you contact the customer service center.
 
 * **Backup Routes**
 
@@ -168,19 +168,19 @@ Retention period for backed up copies: choose one of 7 days, 14 days, 21 days, 3
 
 <br/>
 
-### List of Backup Routes
-Check the server name on the left of the server list, and backup routes of the selected server will be listed at the bottom of the page.   
+### Backup Plan List
+Select the checkbox to the left of the server name in the server list and a list of backup plans for the selected server is displayed on the details screen at the bottom of the screen.
 
 <br/>
 
 ### Retrieve Results
-Click a backup route on the list to retrieve the result of backup, which is collected within an hour to the latest, after backup completion time.  
+Click the backup path in the backup plan list to view the backup result. Backup results are aggregated within a maximum of one hour from the time of backup completion.
 
-| Backup Result             | Description                                                  |
-| ------------------------- | ------------------------------------------------------------ |
-| Successful                | Backup succeeded                                             |
+| Backup Result  | Description |
+| --- | --- |
+| Successful | Backup succeeded |
 | Successful (with caution) | Backup is completed, but original file has changed during backup |
-| Failed                    | Backup failed                                                |
+| Failed  | Backup failed |
 
 > [Note]
 > If a backup is not done within three hours, due to network status, volume of backup data, and lots of backup schedule configured to start all at once, it shall be recorded as a failure.
@@ -190,12 +190,12 @@ Click a backup route on the list to retrieve the result of backup, which is coll
 
 ### Change of Backup Policy
 
-Click **Change** on the right of each item from the list of backup routes to change backup policy: items available to change are `Backup Cycle`, `Backup Time`, `Retention Cycle`.
+Change the backup plan by clicking the **Change** button to the right of each item in the backup plan list. The items that can be changed are the `backup cycle`, `backup time`, and `retention cycle`.
 
 <br/>
 
 ## Apply for Restoration
-If a registered backup route has been backed up more than once, restoration of data can be applied.
+If the registered backup plan has been conducted more than once, the data can be requested for recovery.
 
 * **Backup Route **
 
@@ -227,17 +227,18 @@ Enter contact information to serve as a dialogue channel between administrator a
 
 Restoration status is displayed as below:
 
-| Status     | Description                                    |
-| ---------- | ---------------------------------------------- |
-| Received   | Application for restoration has been received. |
-| Processing | Operator started restoration.                  |
-| Completed  | Restoration has been completed.                |
+| Status | Description |
+| --- | --- |
+| Received | Application for restoration has been received. |
+| Processing | Operator started restoration. |
+| Completed  | Restoration has been completed. |
+
 
 <br/>
 
 ## Delete Servers
 
-Must delete a registered backup route before deleting a server: if there is a registered backup route, message shows and deletion stops.  
+The registered backup plan must be deleted before deleting the server. If there is a registered backup plan, a message will appear and deletion will stop.
 
 > [Caution]
 > If a server is deleted, its retained backup data shall also be deleted. If you need backup data, ask for restoration in advance and restore it to the server you need.  
