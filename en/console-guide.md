@@ -174,7 +174,7 @@ Select the checkbox to the left of the server name in the server list and a list
 <br/>
 
 ### Retrieve Results
-Click the backup plan in the backup plan list to view the backup result. Backup results are aggregated within a maximum of one hour from the time of backup completion.
+Click the backup path in the backup plan list to view the backup result. Backup results are aggregated within a maximum of one hour from the time of backup completion.
 
 | Backup Result  | Description |
 | --- | --- |
