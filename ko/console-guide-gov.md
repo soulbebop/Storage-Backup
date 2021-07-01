@@ -51,7 +51,7 @@ tcbackup install {user-domain}
 
 * **Windows**
 
-Windows용 에이전트는 [TOAST의 다운로드 페이지](http://docs.toast.com/ko/Download)에서 다운로드해 설치합니다. 설치 중 MC Server와 MC Domain 정보를 입력해야 합니다. MC Domain은 사용자의 도메인 정보입니다. MC Server에는 다음 정보를 입력합니다.
+Windows용 에이전트는 [NHN Cloud 다운로드 페이지](http://gov-docs.toast.com/ko/Download)에서 다운로드해 설치합니다. 설치 중 MC Server와 MC Domain 정보를 입력해야 합니다. MC Domain은 사용자의 도메인 정보입니다. MC Server에는 다음 정보를 입력합니다.
 
 ```
 MC Server : tc0backup.toastmaker.net
@@ -74,9 +74,7 @@ tcbackup re-register
 
 아래 PowerShell 스크립트를 다운로드해 실행합니다.
 
-```
-http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
-```
+[re-register.ps1](http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1)
 
 <br/>
 
@@ -120,7 +118,11 @@ tcbackup restart
 ### 백업 계획 추가
 하나의 서버에 여러 개의 백업 계획을 추가할 수 있습니다. 백업 계획 추가는 서버 등록이 완료된 다음에도 할 수 있습니다.
 
-<br/>
+> [주의]
+> 백업은 서버에 부하를 주지 않기 위해 백그라운드에서 천천히 진행됩니다.
+> **1TB 이상의 대용량 데이터** 또는 **1백만 개를 초과하는 다량의 파일**을 백업할 때는 최대 수행 시간인 3시간을 초과해 백업이 실패할 수 있습니다.
+> 백업하려는 경로의 데이터가 기준량을 초과한다면 경로를 나누어 순차적으로 백업할 수 있도록 설정하는 것을 권장합니다.
+> NAS(offline) 상품의 데이터 또는 매우 큰 용량의 데이터를 백업하려는 계획이 있다면 고객센터로 문의하세요.
 
 * **백업 경로**
 
