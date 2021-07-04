@@ -5,7 +5,7 @@
 
 * 사용자 도메인
 ```
-/TCBackup/{domain-id}
+/TC_Gov_Backup/{domain-id}
 ```
 
 > [참고]  
