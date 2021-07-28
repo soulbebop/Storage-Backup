@@ -37,9 +37,9 @@ To communicate with the backup server, add the following to the server security 
 
 | Region | URL |
 | --- | --- |
-| KOREA (Pangyo) | http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
-| KOREA (Pyeongchon) | http://static.toastoven.net/toastcloud/sdk_download/backup/kr2/scripts/linux/bootstrap.sh |
-| JAPAN (Tokyo) | http://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
+| KOREA (Pangyo) | https://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
+| KOREA (Pyeongchon) | https://static.toastoven.net/toastcloud/sdk_download/backup/kr2/scripts/linux/bootstrap.sh |
+| JAPAN (Tokyo) | https://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
 
 ```
 curl {URL} | bash
@@ -61,7 +61,7 @@ tcbackup install {user-domain}
 
 * **Windows**
 
-For Windows agent, download from [Downloads of NHN Cloud](http://docs.toast.com/en/Download) and install. MC Server and MC Domain are required for installation: MC Domain refers to user's domain information and MC Server requires the following:  
+For Windows agent, download from [Downloads of NHN Cloud](https://docs.toast.com/en/Download) and install. MC Server and MC Domain are required for installation: MC Domain refers to user's domain information and MC Server requires the following:  
 
 | Region | MC Server |
 | --- | --- |
@@ -86,7 +86,7 @@ tcbackup re-register
 
 Download and execute the PowerShell script as below.
 
-[re-register.ps1](http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1)
+[re-register.ps1](https://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1)
 
 <br/>
 
