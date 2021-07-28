@@ -32,7 +32,7 @@
 * **Linux**
 
 ```
-curl http://static.toastoven.net/toastcloud/sdk_download/gov-backup/scripts/linux/bootstrap.sh | bash
+curl https://static.toastoven.net/toastcloud/sdk_download/gov-backup/scripts/linux/bootstrap.sh | bash
 ```
 
 <br/>
@@ -51,7 +51,7 @@ tcbackup install {user-domain}
 
 * **Windows**
 
-Windows용 에이전트는 [NHN Cloud 다운로드 페이지](http://gov-docs.toast.com/ko/Download)에서 다운로드해 설치합니다. 설치 중 MC Server와 MC Domain 정보를 입력해야 합니다. MC Domain은 사용자의 도메인 정보입니다. MC Server에는 다음 정보를 입력합니다.
+Windows용 에이전트는 [NHN Cloud 다운로드 페이지](https://gov-docs.toast.com/ko/Download)에서 다운로드해 설치합니다. 설치 중 MC Server와 MC Domain 정보를 입력해야 합니다. MC Domain은 사용자의 도메인 정보입니다. MC Server에는 다음 정보를 입력합니다.
 
 ```
 MC Server : tc0backup.toastmaker.net
@@ -74,7 +74,7 @@ tcbackup re-register
 
 아래 PowerShell 스크립트를 다운로드해 실행합니다.
 
-[re-register.ps1](http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1)
+[re-register.ps1](https://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1)
 
 <br/>
 

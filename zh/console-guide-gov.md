@@ -31,7 +31,7 @@
 * **Linux**
 
 ```
-curl http://static.toastoven.net/toastcloud/sdk_download/gov-backup/scripts/linux/bootstrap.sh | bash
+curl https://static.toastoven.net/toastcloud/sdk_download/gov-backup/scripts/linux/bootstrap.sh | bash
 ```
 
 <br/>
@@ -50,7 +50,7 @@ tcbackup install {user-domain}
 
 * **Windows**
 
-从 [TOAST下载页面](http://docs.toast.com/zh/Download)下载windows agent并安装。安装时需要输入MC Server和MC Domain信息。MC Domain是用户的域信息。在 MC Server中需要输入以下信息。
+从 [TOAST下载页面](https://docs.toast.com/zh/Download)下载windows agent并安装。安装时需要输入MC Server和MC Domain信息。MC Domain是用户的域信息。在 MC Server中需要输入以下信息。
 
 ```
 MC Server : tc0backup.toastmaker.net
@@ -74,7 +74,7 @@ tcbackup re-register
 下载并运行下面的PowerShell脚本。
 
 ```
-http://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
+https://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1
 ```
 
 <br/>
