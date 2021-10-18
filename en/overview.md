@@ -2,9 +2,9 @@
 
 Backup is a service that makes copies and keeps them safely to prepare for data loss due to security threats, user's operational mistakes, storage device failure, natural disasters, and so on. You can also restore data using the backup copy.
 
-NHN Cloud backup service uses both full and incremental backup methods. Initially, the service performs backup of all data in the path registered by the user. Afterwards, only incremental backups are performed using variable-length deduplication technology, which can minimize backup data by removing duplicates. This shortens backup times and reduces network usage. Data is encrypted and transferred securely to backup storage.
+NHN Cloud Backup service uses both full and incremental backup methods. Initially, the service performs backup of all data in the path registered by the user. Afterwards, only incremental backups are performed using variable-length deduplication technology, which can minimize backup data by removing duplicates. This shortens backup times and reduces network usage. Data is encrypted and transferred securely to backup storage.
 
-NHN Cloud backup service provides a web console environment where you can easily register backup policies, view backup history, and request restoration. Backup results are collected daily and reported to the user's email.
+NHN Cloud Backup service provides a web console environment where you can easily register backup policies, view backup history, and request restoration. Backup results are collected daily and reported to the user's email.
 
 ## Service Features
 * Supports various operating systems.
