@@ -1,33 +1,33 @@
 ## Storage > Backup > Overview
 
-Backup refers to creating and safely saving copies, in preparation against potential data loss, out of security threats, user's operational mistakes, failure in saving devices, or natural disasters. Saved copies may be used to restore data.  
+Backup is a service that makes copies and keeps them safely to prepare for data loss due to security threats, user's operational mistakes, storage device failure, natural disasters, and so on. You can also restore data using the backup copy.
 
-NHN Cloud Backup adopts both Full Backup and Incremental Backup. The initial backup regards the entire data of routes that user registered. In later times, only changes since the last backup are contained, by using variable-length deduplication, which can minimize backup data by removing duplicates.  Therefore, time, as well as network usage volume, can be saved. Data, meanwhile, is encrypted and safely transmitted to the backup storage.
+NHN Cloud Backup service uses both full and incremental backup methods. Initially, the service performs backup of all data in the path registered by the user. Afterwards, only incremental backups are performed using variable-length deduplication technology, which can minimize backup data by removing duplicates. This shortens backup times and reduces network usage. Data is encrypted and transferred securely to backup storage.
 
-NHN Cloud Backup provides a web console environment, in which backup policy is conveniently registered, history is retrieved, and requests for backup are made.
+NHN Cloud Backup service provides a web console environment where you can easily register backup policies, view backup history, and request restoration. Backup results are collected daily and reported to the user's email.
 
 ## Service Features
-* Supports various operating systems;
-* Optimized to virtual environment;
-* Backup is available without service suspension; and,
-* Provides user-defined backup policy where the cycle, hour, and retention cycle can be set.
+* Supports various operating systems.
+* Optimized for virtualization environment.
+* Performs backup without interrupting the service.
+* Provides a user-defined backup policy that allows you to set the backup cycle, backup time, and retention cycle.
 
 ### Backup Cycle
-Choose either daily or weekly.
+You can choose between 1-day interval and 7-day interval.
 
 ### Backup Time
-Select a backup start time by the hour. It is recommended to select time, when file change is the least and server is idle.  Actual start time may differ up to 1 hour, depending on the situation.  
+You can select a backup start time by the hour. It is recommended to select the time when the number of file change is minimal and the server is idle. Actual backup start time may vary by up to 1 hour, depending on the situation.
 
 ### Retention Cycle
-Choose one of 7 days, 14 days, 21 days, or 30 days.
+You can select a retention cycle of 7 days, 14 days, 21 days, 30 days, 6 months (180 days), 1 year (365 days), 3 years (1095 days), or 5 years (1825 days).
 
-### Retrieve Results
-User can retrieve backup results in the web console within half an hour to the latest, after backup is completed. User shall be reported by email on failure of backup. If a backup is not done for up to three hours, it shall be recorded as a failure.
+### View Results
+Users can view backup results on the web console within 30 minutes from the backup completion time. If the backup fails, the details of failure are reported to the user's email. If the backup is not performed up to 3 hours, it is logged as a failure.
 
 ## Supported Operating Systems
 NHN Cloud supports the following operating systems:
 
-| OS | Hardware Architecture | Supportive Version | Supportive Configuration |
+| OS | Hardware Architecture | Supported Version | Supported Configuration |
 | --- | --- | --- | --- |
 | CentOS | x64 | 7.8 | ext2, ext3, ext4, xfs |
 | Ubuntu | x64 | 18.04 LTS<br/>20.04 LTS | ext2, ext3, ext4 |
@@ -35,27 +35,27 @@ NHN Cloud supports the following operating systems:
 | Windows Server | x64 | 2012 R2 STD<br/>2016 STD<br/>2019 STD | NTFS |
 
 ## Application Procedure for Restoration
-Restoration is processed by user's application, to be followed by operator's confirmation. For flawless processing, the operator may contact users.  
+Once the user applies for restoration, the operator confirms the application and proceeds with the restoration. For smooth processing, the operator may contact you. The restoration application process is as follows:
 
 1. Select a server to restore.
 2. Click **Apply for Restoration** in the **Restoration** tab.
 3. Fill in the content and click **Apply**.
 
-Restoration, when applied, is completed within three business hours, or in the following day, if application is made after business hours.
+If you apply for restoration, it will be completed within 3 business hours. If it is made after business hours, it will be completed the next day.
 
-Restoration is available only during business hours (10am to 6pm weekdays), with the operator's confirmation.
+Restoration is available only during business hours (10 am to 6 pm on weekdays), and the operator proceeds with the restoration after confirmation.
 
-## Charges  
-When a server is registered, basic monthly price shall be charged, with more charges to be added, depending on the number of registered servers and storage volume. Basic monthly prices is applied for two servers and 100GB of storage volume.  
+## Charges
+When a server is registered, a basic monthly fee is charged. Additional fees are charged depending on the number of registered servers and storage usage. The default specification for the monthly subscription is two servers and 100 GB of storage usage.
 
-## Reference  
+## Reference
 ### Backup Software
 DELL EMC AVAMAR
 
-### Installation Location of Backup Program
+### Backup Program Installation Location
 * Linux : /usr/local/avamar
 * Windows : C:\Program Files\avs
 
-### Demonstration (Process) Information
+### Backup Program Daemon (Process) Information
 * Linux : /usr/local/avamar/bin/avagent.bin
 * Windows : Avamar Backup Client
