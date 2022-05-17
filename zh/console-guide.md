@@ -1,45 +1,45 @@
-## Storage > Backup > 控制台使用指南
+## Storage > Backup > Console Guide
 
-## 备份agent
-添加备份服务器时，要在目标服务器上安装agent。安装agent时需要用户的域名信息。域名信息可以在**添加服务器**页面中确认。
+## Backup Agent
+To register a backup server, agent must be installed in the server. User's domain information is required to install an agent: check domain information on the **Register Server** page.
 
-* 用户的域名
+* User's domain
 ```
 /TCBackup/{domain-id}
 ```
 
-> [参考]  
-> 域是为了把多台服务器分组后管理而使用的备份系统的一个单元。
-> 激活备份服务时会自动创建域。
-> 用户的域名下登记备份服务器时，用agent安装命令的参数，输入域名信息。
+> [Note]  
+> Domain is the unit of the backup system used to manage many servers in groups.
+> It is automatically created if backup service is enabled.
+> To register a backup server in user's domain, enter domain information with the parameter commanding agent installation.
 >
 
 <br/>
 
-### 设置服务器安全组(security group)
+### Security Group Configuration
 
-如需与备份服务器通信，请在服务器安全组添加以下内容。
+To communicate with the backup server, add the following to the server security group.
 
-| 方向(direction) | 端口 | 地区 | CIDR |
+| Direction | Port | Region | CIDR |
 | --- | --- | --- | --- |
-| Ingress/Egress | ALL TCP | 韩国（板桥） | 133.186.132.0/24 |
-| | | 韩国（坪村） | 133.186.207.4/32, 133.186.207.5/32 |
-| | | 日本（东京） | 133.223.17.0/24 |
-| Egress | 443 | 韩国（板桥） | 103.243.202.188/32 |
-| | | 韩国（坪村） | 103.243.202.188/32 |
-| | | 日本（东京） | 119.235.231.50/32 |
+| Ingress/Egress | ALL TCP | KOREA (Pangyo) | 133.186.132.0/24 |
+| | | KOREA (Pyeongchon) | 133.186.207.4/32, 133.186.207.5/32 |
+| | | JAPAN (Tokyo) | 133.223.17.0/24 |
+| Egress | 443 | KOREA (Pangyo) | 103.243.202.188/32 |
+| | | KOREA (Pyeongchon) | 103.243.202.188/32 |
+| | | JAPAN (Tokyo) | 119.235.231.50/32 |
 
 <br/>
 
-### 设置备份CLI
+### Install Backup CLI
 
 * **Linux**
 
-| 地区 | URL |
+| Region | URL |
 | --- | --- |
-| 韩国（板桥） | https://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
-| 韩国（坪村） | https://static.toastoven.net/toastcloud/sdk_download/backup/kr2/scripts/linux/bootstrap.sh |
-| 日本（东京） | https://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
+| KOREA (Pangyo) | https://static.toastoven.net/toastcloud/sdk_download/backup/scripts/linux/bootstrap.sh |
+| KOREA (Pyeongchon) | https://static.toastoven.net/toastcloud/sdk_download/backup/kr2/scripts/linux/bootstrap.sh |
+| JAPAN (Tokyo) | https://static.toastoven.net/toastcloud/sdk_download/backup/jp/scripts/linux/bootstrap.sh |
 
 ```
 curl {URL} | bash
@@ -47,9 +47,14 @@ curl {URL} | bash
 
 <br/>
 
-### 安装备份agent
+### Install Backup Agent
 
-则按如下方式安装agent。
+> [Caution]
+> Backup registers a server with the hostname of the server where the agent is installed.
+> If you register multiple servers with the same hostname within one user domain, backup may not be performed.
+> Before installing the agent, make sure that the hostname is not duplicated.
+
+Install the agent as below:
 
 * **Linux**
 
@@ -61,18 +66,18 @@ tcbackup install {user-domain}
 
 * **Windows**
 
-从 [NHN Cloud下载页面](https://docs.toast.com/zh/Download)下载windows agent并安装。安装时需要输入MC Server和MC Domain信息。MC Domain是用户的域信息。在 MC Server中需要输入以下信息。
+For Windows agent, download from [Downloads of NHN Cloud](https://docs.toast.com/en/Download) and install. MC Server and MC Domain are required for installation: MC Domain refers to user's domain information and MC Server requires the following:  
 
-| 地区 | MC Server |
+| Region | MC Server |
 | --- | --- |
-| 韩国（板桥） | tcbackup1.toastmaker.net |
-| 韩国（坪村） | kr2-backup-mc1.cloud.toast.com |
-| 日本（东京） | tcbackup.nhn-japan.com |
+| KOREA (Pangyo) | tcbackup1.toastmaker.net |
+| KOREA (Pyeongchon) | kr2-backup-mc1.cloud.toast.com |
+| JAPAN (Tokyo) | tcbackup.nhn-japan.com |
 
 <br/>
 
-### 重新注册备份agent
-如备份服务器的主机名变更,需重新注册备份agent,命令如下:
+### Re-register Backup Agent
+If the hostname of backup server has changed, agent needs to be re-registered. Here's the command:
 
 * **Linux**
 
@@ -84,14 +89,14 @@ tcbackup re-register
 
 * **Windows**
 
-下载并运行下面的PowerShell脚本。
+Download and execute the PowerShell script as below.
 
 [re-register.ps1](https://static.toastoven.net/toastcloud/sdk_download/backup/scripts/windows/re-register.ps1)
 
 <br/>
 
-### 关闭备份agent
-如果要短时间暂停备份，可以关闭agent。
+### Close Backup Agent
+To suspend backup for a while, you can close an agent.
 
 * **Linux**
 
@@ -103,12 +108,12 @@ tcbackup stop
 
 * **Windows**
 
-右键单击系统托盘中的备份agent图标，然后点击**关闭**。
+Right-click the backup agent icon in the system tray and press **Close**.
 
 <br/>
 
-### 重新启动备份agent
-要重新启已关闭的备份agent，使用以下命令。
+### Restart Backup Agent
+To restart the closed backup agent, use the following command:
 
 * **Linux**
 
@@ -120,124 +125,131 @@ tcbackup restart
 
 * **Windows**
 
-在开始菜单中运行**EMC Avamar > Client**。
+Execute **EMC Avamar > Client** on the start menu.
 
 <br/>
 
-## 添加服务器
-备份服务器安装agent后，则可以从**添加服务器**页面的**选择服务器** 项中选择该服务器。
+## Register Server
+Install agent in the backup server and select a server in which agent is registered from **Select Server** in **Register Server**.
 
 <br/>
 
-### 添加备份路径
-一台服务器可添加多个备份路径。完成服务器添加后也可以添加备份路径。
+### Add Backup Plan
+Multiple backup plans can be added to one server. Backup plan can be added even after completing the server registration.
 
-* **备份路径**
+> [Caution]
+> So as to not put a strain on the server, backup is conducted slowly in the background.
+> **If 1TB or more of bulk data** or **1 million or more of numbers of files are exceeded**when backing up, more than 3 hours can be spent, leading to backup failure.
+> We recommend that you back up in serial order by dividing the paths if a backup path exceeds a standard amount.
+> In case of NAS(offline) product data or large-capacity data backup, we recommend that you contact the customer service center.
 
-指定要备份的路径。此时务必准确输入绝对路径。如果输入错误的路径，有可能无法备份或备份的路径有错误。如果把soft link设置为备份路径，则仅备份soft link file。
+* **Backup Paths**
+
+Specify a path for backup. Make sure the path is entered correctly; otherwise, backup may fail or end up in a wrong path. When soft link is set as the backup path, only soft link file is backed up.
 
 ```
-例如)
+e.g)
 Windows :   c:\backup
 Linux   :   /home/backup
 ```
 
 <br/>
 
-* **备份周期**
+* **Backup Cycle**
 
-执行备份的周期，可以选择1日间隔或7日间隔。
-
-<br/>
-
-* **备份时间**
-
-开始备份的时间。以1小时为单位选择备份时间。备份时间建议选择文件更改少，服务器空闲的时间段。实际备份开始时间根据当时的情况可能会存在1小时左右的偏差。
+Cycle of backup execution: choose either daily or weekly.
 
 <br/>
 
-* **备份保留周期**
+* **Backup Time**
 
-备份保留周期可选择7日，14日，21日，30日，6月(180日)，1年(365日)，3年(1095日)，5年(1825日)。
-
-<br/>
-
-### 备份路径目录
-在服务器目录中选择服务器名称左侧的复选框，则屏幕下方的详细页面中显示所选服务器的备份路径目录。
+Start time of backup: select by the hour. It is recommended to select time when file change is the least and server is idle. Actual backup start time may differ up to 1 hour, depending on the situation.
 
 <br/>
 
-### 查看备份结果
-在备份路径目录中点击备份路径可查看备份结果。备份结果将在备份完成后的1時間钟内汇总。
+* **Retention Cycle**
 
-| 备份结果  | 详情                        |
-| ------ | --------------------------- |
-| 成功     | 备份成功                       |
-| 成功(注意) | 已完成备份，但原始文件在备份期间发生了变化 |
-| 失败     | 备份失败                       |
+Retention period for backed up copies: choose one of 7 days, 14 days, 21 days, 30 days, 6 months(180 days), 1 year(365 days), 3 years(1095 days) or 5 years(1825 days).
 
-> [参考]
-> 根据网络状态和备份数据量,设定为同一个时间启用的多个备份计划任务,如3小时之内不能完成,则该计划任务记录为失败。
+<br/>
+
+### Backup Plan List
+Select the checkbox to the left of the server name in the server list and a list of backup plans for the selected server is displayed on the details screen at the bottom of the screen.
+
+<br/>
+
+### Retrieve Results
+Click the backup path in the backup plan list to view the backup result. Backup results are aggregated within a maximum of one hour from the time of backup completion.
+
+| Backup Result  | Description |
+| --- | --- |
+| Successful | Backup succeeded |
+| Successful (with caution) | Backup is completed, but original file has changed during backup |
+| Failed  | Backup failed |
+
+> [Note]
+> If a backup is not done within three hours, due to network status, volume of backup data, and lots of backup schedule configured to start all at once, it will be recorded as a failure.
 >
 
 <br/>
 
-### 更改备份政策
-在备份路径目录中点击各项目右侧的**变更**按钮来更改备份策略。可更改的项目是“备份周期”，“备份时间”和“保留周期”。
+### Change of Backup Policy
+
+Change the backup plan by clicking the **Change** button to the right of each item in the backup plan list. The items that can be changed are the `backup cycle`, `backup time`, and `retention cycle`.
 
 <br/>
 
-## 恢复申请
-如果已注册的备份路径的备份次数超过1次以上，则可以使用该数据申请恢复。
+## Apply for Restoration
+If the registered backup plan has been conducted more than once, the data can be requested for recovery.
 
-* **备份路径**
+* **Backup Path**
 
-可以选择用户添加过的备份路径之一
-
-<br/>
-
-* **备份日期**
-
-可以选择备份日期。如果从未备份或备份失败导致没有备份的数据，则会提示没有可用于恢复的数据。
+User can select one of the added backup paths.   
 
 <br/>
 
-* **请求事项**
+* **Backup Date**
 
-可以恢复到备份服务器，也可以恢复到新的服务器。
+Select a date when a copy to restore was backed up. When there is no backup data since all has failed, message will show there is no data to restore.
+
+<br/>
+
+* **Requests**
+
+Feel free to request for details required for restoration. Restoration can be made to the backup server, or to a new server.  
 
 ```
-例如)
-要恢复的服务器的主机名 :   backup.guide
-恢复的路径   :   /home/debian
+e.g)
+Hostname of the server to recover  : backup.guide
+Path to recover : /home/debian
 ```
 
 <br/>
 
-* **联系方式**
+* **Contact**
 
-为了顺利进行恢复，输入联系方式用于运营负责人与请求人之间的沟通。我们不存储收集的个人信息，并在恢复完成后立即删除。
+Enter contact information to serve as a dialogue channel between administrator and requester for flawless restoration. Collected personal information will not be saved, to be immediately discarded when restoration is completed.
 
-恢复进展情况如下表所示。
+Restoration status is displayed as below:
 
-| 状态   | 详情           |
-| ---- | ------------ |
-| 接收   | 接收恢复请求   |
-| 进行中 | 运营负责人开始恢复 |
-| 完成   | 完成恢复        |
+| Status | Description |
+| --- | --- |
+| Received | Application for restoration has been received. |
+| Processing | Operator started restoration. |
+| Completed  | Restoration has been completed. |
 
 
 <br/>
 
-## 删除服务器
+## Unregister Server
 
-删除服务器之前必须先删除已注册的备份路径。如果存在注册的备份路径，则会显示提示并中止删除。
+The registered backup plan must be deleted before unregistering the server. If there is a remaining backup plan, a message will appear and unregistering will stop.
 
-> [注意]
-> 删除服务器的同时删除保留的备份数据。如需备份数据请提前提交恢复请求，将其还原到所需的服务器上。
+> [Caution]
+> If a server is unregistered, its retained backup data will also be deleted. If you need backup data, ask for restoration in advance and restore it to the server you want.
 >
 
-从Web控制台删除服务器后，必须中止服务器上的代理并取消注册。否则，无法重新注册服务器。取消命令如下。
+After unregistering a server, you must access the server, stop the agent, and cancel the registration of the agent. Otherwise, the server cannot be registered again. The cancellation command is as follows.
 
 * **Linux**
 
@@ -249,4 +261,4 @@ tcbackup uninstall
 
 * **Windows**
 
-关闭代理。再次使用时需要打开客户端的激活条目输入新的域信息。
+Close the agent. To use it again, open Enable Client and enter new domain information.
