@@ -7,4 +7,4 @@
 * Japan (Tokyo) region opened
 
 ### February 22, 2018
-* New product release
+* New service release
