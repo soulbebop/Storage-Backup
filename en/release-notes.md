@@ -1,10 +1,10 @@
 ## Storage > Backup > Release Notes
 
-### 2020. 08. 25.
-#### 한국(평촌) 리전 오픈
+### August 25, 2020
+* Korea (Pyeongchon) region opened
 
-### 2019. 05. 14.
-#### 일본(도쿄) 리전 오픈
+### May 14, 2019
+* Japan (Tokyo) region opened
 
-### 2018. 02. 22.
-#### 신규 상품 출시
+### February 22, 2018
+* New service release
