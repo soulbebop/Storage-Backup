@@ -1,61 +1,61 @@
-## Storage > Backup > 概要
+## Storage > Backup > Overview
 
-备份是一种创建副本的服务。可以在发生安全事故，用户操作失误，存储设备故障，自然灾害等数据的丢失的情况下安全的保存副本。也可以利用保存的副本来恢复数据使用。
+Backup is a service that makes copies and keeps them safely to prepare for data loss due to security threats, user's operational mistakes, storage device failure, natural disasters, and so on. You can also restore data using the backup copy.
 
-NHN Cloud备份服务有完全备份方式和增量备份方式。第一次备份，将备份用户注册路径的所有数据，之后使用可变长度重复数据删除技术(variable-length deduplication)来进行增量备份。这种方式可以最大限度地缩减备份时间并降低网络的使用量。数据经过加密并安全地传输到备份存储。
+NHN Cloud Backup service uses both full and incremental backup methods. Initially, the service performs backup of all data in the path registered by the user. Afterwards, only incremental backups are performed using variable-length deduplication technology, which can minimize backup data by removing duplicates. This shortens backup times and reduces network usage. Data is encrypted and transferred securely to backup storage.
 
-NHN Cloud备份服务提供Web控制台环境，这样您可以轻松的添加备份策略，查看备份历史记录和使用恢复请求。每天进行备份的结果还可以发送到用户的邮箱。
+NHN Cloud Backup service provides a web console environment where you can easily register backup policies, view backup history, and request restoration. Backup results are collected daily and reported to the user's email.
 
-## 服务特点
-* 支持各种操作系统。
-* 针对虚拟化环境进行了优化。
-* 可以在不中断服务的情况下进行备份。
-* 提供自定义备份策略， 可以自行设置备份周期、备份时间和保留周期。
+## Service Features
+* Supports various operating systems.
+* Optimized for virtualization environment.
+* Performs backup without interrupting the service.
+* Provides a user-defined backup policy that allows you to set the backup cycle, backup time, and retention cycle.
 
-### 备份周期
-可选择1天间隔或7天间隔。
+### Backup Cycle
+You can choose between 1-day interval and 7-day interval.
 
-### 备份时间
-以1小时为单位选择备份时间。备份时间建议选择文件变更少、服务器空闲的时间段。实际备份开始时间根据具体的情况可能会存在1小时左右的差异。
+### Backup Time
+You can select a backup start time by the hour. It is recommended to select the time when the number of file change is minimal and the server is idle. Actual backup start time may vary by up to 1 hour, depending on the situation.
 
-### 备份保留周期
-保留周期可选择7日，14日，21日，30日。
+### Retention Cycle
+You can select a retention cycle of 7 days, 14 days, 21 days, 30 days, 6 months (180 days), 1 year (365 days), 3 years (1095 days), or 5 years (1825 days).
 
-### 查看备份结果
-用户可以在备份完成时间后的30分钟之内在Web控制台查看备份结果。如果备份失败用户将收到备份失败的邮件。如果3小时备份未完成，则认为备份失败。
+### View Results
+Users can view backup results on the web console within 30 minutes from the backup completion time. If the backup fails, the details of failure are reported to the user's email. If the backup is not performed up to 3 hours, it is logged as a failure.
 
-## 支持的操作系统
-NHN Cloud支持的操作系统如下。
+## Supported Operating Systems
+NHN Cloud supports the following operating systems:
 
-| 操作系统 | 硬件架构 | 支持的版本 | 支持的文件系统 |
+| OS | Hardware Architecture | Supported Version | Supported Configuration |
 | --- | --- | --- | --- |
 | CentOS | x64 | 7.8 | ext2, ext3, ext4, xfs |
 | Ubuntu | x64 | 18.04 LTS<br/>20.04 LTS | ext2, ext3, ext4 |
 | Debian | x64 | 9, 10 | ext2, ext3, ext4 |
 | Windows Server | x64 | 2012 R2 STD<br/>2016 STD<br/>2019 STD | NTFS |
 
-## 恢复申请程序
-运营负责人根据用户的要求确认恢复。为了方便确认处理，运营负责人有可能会给用户致电。申请恢复的流程如下。
+## Application Procedure for Restoration
+Once the user applies for restoration, the operator confirms the application and proceeds with the restoration. For smooth processing, the operator may contact you. The restoration application process is as follows:
 
-1. 选择要恢复的服务器。
-2. 在**恢复**选项卡中点击**恢复申请**。
-3. 编写恢复申请内容后点击**申请**。
+1. Select a server to restore.
+2. Click **Apply for Restoration** in the **Restoration** tab.
+3. Fill in the content and click **Apply**.
 
-申请恢复后，在3个工作时间内完成恢复。如果不是在工作时间则在次日完成恢复。
+If you apply for restoration, it will be completed within 3 business hours. If it is made after business hours, it will be completed the next day.
 
-恢复操作只在工作时间(工作日上午10点~下午6点)进行，由运营负责人确认后进行处理。
+Restoration is available only during business hours (10 am to 6 pm on weekdays), and the operator proceeds with the restoration after confirmation.
 
-## 费用
-添加服务器，将收取默认的月租费。根据添加的服务器数量以及存储使用情况收取额外费用。标准月租费包含2台服务器和100GB的存储空间。
+## Charges
+When a server is registered, a basic monthly fee is charged. Additional fees are charged depending on the number of registered servers and storage usage. The default specification for the monthly subscription is two servers and 100 GB of storage usage.
 
-## 参考事项
-### 备份agent
+## Reference
+### Backup Software
 DELL EMC AVAMAR
 
-### 备份agent的安装位置
+### Backup Program Installation Location
 * Linux : /usr/local/avamar
 * Windows : C:\Program Files\avs
 
-### 备份程序进程信息
+### Backup Program Daemon (Process) Information
 * Linux : /usr/local/avamar/bin/avagent.bin
 * Windows : Avamar Backup Client
