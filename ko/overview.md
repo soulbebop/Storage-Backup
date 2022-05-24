@@ -32,6 +32,7 @@ NHN Cloud에서 지원하는 운영체제는 다음과 같습니다.
 | CentOS | x64 | 7.8 | ext2, ext3, ext4, xfs |
 | Ubuntu | x64 | 18.04 LTS<br/>20.04 LTS | ext2, ext3, ext4 |
 | Debian | x64 | 9, 10 | ext2, ext3, ext4 |
+| Rocky | x64 | 8.5 | xfs |
 | Windows Server | x64 | 2012 R2 STD<br/>2016 STD<br/>2019 STD | NTFS |
 
 ## 복구 신청 절차
