@@ -22,7 +22,7 @@ To communicate with the backup server, add the following to the server security 
 
 | Direction | Port | CIDR |
 | --- | --- | --- |
-| Ingress/Egress | ALL TCP | 211.180.235.123/32<br/>211.180.235.124/32 |
+| Ingress/Egress | ALL TCP | 211.180.235.123/32<br/>211.180.235.124/32<br/>211.180.235.106/32<br/>211.180.235.122/32 |
 
 <br/>
 
@@ -58,7 +58,7 @@ tcbackup install {user-domain}
 For Windows agent, download from [Downloads of TOAST](https://docs.toast.com/en/Download) and install. MC Server and MC Domain are required for installation: MC Domain refers to user's domain information and MC Server requires the following:  
 
 ```
-MC Server : tc0backup.toastmaker.net
+MC Server : tc0backup2.toastmaker.net
 ```
 
 <br/>
