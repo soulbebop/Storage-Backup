@@ -22,7 +22,7 @@
 
 | 방향(direction) | 포트 | CIDR |
 | --- | --- | --- |
-| Ingress/Egress | ALL TCP | 211.180.235.123/32<br/>211.180.235.124/32 |
+| Ingress/Egress | ALL TCP | 211.180.235.123/32<br/>211.180.235.124/32<br/>211.180.235.106/32<br/>211.180.235.122/32 |
 
 
 <br/>
@@ -59,7 +59,7 @@ tcbackup install {user-domain}
 Windows용 에이전트는 [NHN Cloud 다운로드 페이지](https://gov-docs.toast.com/ko/Download)에서 다운로드해 설치합니다. 설치 중 MC Server와 MC Domain 정보를 입력해야 합니다. MC Domain은 사용자의 도메인 정보입니다. MC Server에는 다음 정보를 입력합니다.
 
 ```
-MC Server : tc0backup.toastmaker.net
+MC Server : tc0backup2.toastmaker.net
 ```
 
 <br/>
