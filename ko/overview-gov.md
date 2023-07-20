@@ -32,11 +32,11 @@ NHN Cloud에서 지원하는 운영체제는 다음과 같습니다.
 
 | 운영체제 | 하드웨어 아키텍처 | 지원 버전 | 지원 구성 |
 | --- | --- | --- | --- |
-| CentOS | x64 | 7.8 | ext2, ext3, ext4, xfs |
-| Ubuntu | x64 | 18.04 LTS<br/>20.04 LTS | ext2, ext3, ext4 |
+| CentOS | x64 | 7.9 | ext2, ext3, ext4, xfs |
+| Ubuntu | x64 | 18.04 LTS<br/>20.04 LTS<br/>22.04 LTS | ext2, ext3, ext4 |
 | Debian | x64 | 9, 10 | ext2, ext3, ext4 |
-| Rocky | x64 | 8.5 | xfs |
-| Windows Server | x64 | 2012 R2 STD<br/>2016 STD<br/>2019 STD | NTFS |
+| Rocky | x64 | 8.7 | xfs |
+| Windows Server | x64 | 2012 R2 STD<br/>2016 STD<br/>2019 STD<br/>2022 STD | NTFS |
 
 ## 복구 신청 절차
 복구는 사용자의 신청에 따라 운영자가 확인하여 진행합니다. 원활한 처리를 위해 운영자가 사용자에게 연락을 취할 수도 있습니다. 복구 신청 절차는 다음과 같습니다.
