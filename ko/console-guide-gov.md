@@ -31,9 +31,15 @@
 
 * **Linux**
 
+| 리전 | URL |
+| --- | --- |
+| 한국(판교) | https://static.toastoven.net/toastcloud/sdk_download/gov-backup/kr1/scripts/linux/bootstrap.sh |
+| 한국(평촌) | https://static.toastoven.net/toastcloud/sdk_download/gov-backup/kr2/scripts/linux/bootstrap.sh |
+
 ```
-curl https://static.toastoven.net/toastcloud/sdk_download/gov-backup/scripts/linux/bootstrap.sh | bash
+curl {URL} | bash
 ```
+
 
 <br/>
 
@@ -58,9 +64,11 @@ tcbackup install {user-domain}
 
 Windows용 에이전트는 [NHN Cloud 다운로드 페이지](https://gov-docs.toast.com/ko/Download)에서 다운로드해 설치합니다. 설치 중 MC Server와 MC Domain 정보를 입력해야 합니다. MC Domain은 사용자의 도메인 정보입니다. MC Server에는 다음 정보를 입력합니다.
 
-```
-MC Server : tc0backup2.toastmaker.net
-```
+| 리전 | MC Server |
+| --- | --- |
+| 한국(판교) | tc0backup2.toastmaker.net |
+| 한국(평촌) | tc0backup-kr2.toastmaker.net |
+
 
 <br/>
 
