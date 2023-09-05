@@ -4,9 +4,11 @@
 백업할 서버를 등록하려면 먼저 대상 서버에 에이전트(agent)를 설치해야 합니다. 에이전트를 설치할 때는 사용자의 도메인 정보가 필요합니다. 도메인 정보는 **서버 등록** 페이지에서 확인할 수 있습니다.
 
 * 사용자 도메인
-```
-/TC_Gov_Backup/{domain-id}
-```
+
+| 리전 | 도메인 |
+| --- | --- |
+| 한국(판교) | `/TC_Gov_Backup/{domain-id}`     |
+| 한국(평촌) | `/TC_Gov_kr2_Backup/{domain-id}` |
 
 > [참고]  
 > 도메인은 많은 수의 서버를 그룹화하여 관리하기 위해 사용하는 백업 시스템의 단위입니다.
@@ -20,9 +22,11 @@
 
 백업 서버와 통신하려면 서버 보안 그룹에 아래 내용을 추가합니다.
 
-| 방향(direction) | 포트 | CIDR |
-| --- | --- | --- |
-| Ingress/Egress | ALL TCP | 211.180.235.123/32<br/>211.180.235.124/32<br/>211.180.235.106/32<br/>211.180.235.122/32 |
+| 방향(direction) | 포트 | 리전 | CIDR |
+| --- | --- | --- | --- |
+| Ingress/Egress | ALL TCP | 한국(판교) | 211.180.235.123/32<br/>211.180.235.124/32<br/>211.180.235.106/32<br/>211.180.235.122/32 |
+| | | 한국(평촌) | 180.210.103.246/32<br/>180.210.103.247/32 |
+
 
 
 <br/>
@@ -31,9 +35,15 @@
 
 * **Linux**
 
+| 리전 | URL |
+| --- | --- |
+| 한국(판교) | https://static.toastoven.net/toastcloud/sdk_download/gov-backup/kr1/scripts/linux/bootstrap.sh |
+| 한국(평촌) | https://static.toastoven.net/toastcloud/sdk_download/gov-backup/kr2/scripts/linux/bootstrap.sh |
+
 ```
-curl https://static.toastoven.net/toastcloud/sdk_download/gov-backup/scripts/linux/bootstrap.sh | bash
+curl {URL} | bash
 ```
+
 
 <br/>
 
@@ -58,9 +68,11 @@ tcbackup install {user-domain}
 
 Windows용 에이전트는 [NHN Cloud 다운로드 페이지](https://gov-docs.toast.com/ko/Download)에서 다운로드해 설치합니다. 설치 중 MC Server와 MC Domain 정보를 입력해야 합니다. MC Domain은 사용자의 도메인 정보입니다. MC Server에는 다음 정보를 입력합니다.
 
-```
-MC Server : tc0backup2.toastmaker.net
-```
+| 리전 | MC Server |
+| --- | --- |
+| 한국(판교) | tc0backup2.toastmaker.net |
+| 한국(평촌) | tc0backup-kr2.toastmaker.net |
+
 
 <br/>
 
