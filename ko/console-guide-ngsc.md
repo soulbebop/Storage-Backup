@@ -56,7 +56,7 @@ tcbackup install {user-domain}
 
 * **Windows**
 
-Windows용 에이전트는 [NHN Cloud 다운로드 페이지](https://docs.ngsc-nhncloud.com/ko/Download)에서 다운로드해 설치합니다. 설치 중 MC Server와 MC Domain 정보를 입력해야 합니다. MC Domain은 사용자의 도메인 정보입니다. MC Server에는 다음 정보를 입력합니다.
+Windows용 에이전트는 [NHN Cloud 다운로드 페이지](https://docs.gncloud.go.kr/ko/Download)에서 다운로드해 설치합니다. 설치 중 MC Server와 MC Domain 정보를 입력해야 합니다. MC Domain은 사용자의 도메인 정보입니다. MC Server에는 다음 정보를 입력합니다.
 
 ```
 MC Server : 172.16.31.4
