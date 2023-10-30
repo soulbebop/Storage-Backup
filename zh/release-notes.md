@@ -1,10 +1,20 @@
 ## Storage > Backup > Release Notes
 
+### October 31, 2023
+* New region opened in Korea (Gwangju)
+
+#### Feature Updates
+* Changed the destination for backup result mail (Tokyo region excluded)
+    * AS-IS
+        * All project members with permissions in the project
+    * TO-BE
+        * Project members with Backup Admin permission among their project permissions
+
 ### August 25, 2020
-* Korea (Pyeongchon) region opened
+* New region opened in Korea (Pyeongchon)
 
 ### May 14, 2019
-* Japan (Tokyo) region opened
+* New region opened in Japan (Tokyo)
 
 ### February 22, 2018
-* New service release
+* Release of a New Service
