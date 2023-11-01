@@ -1,8 +1,6 @@
 ## Storage > Backup > Release Notes
 
 ### October 31, 2023
-* New region opened in Korea (Gwangju)
-
 #### Feature Updates
 * Changed the destination for backup result mail (Tokyo region excluded)
     * AS-IS
